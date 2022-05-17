@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Graphtage 0.3.0-git documentation</title>
+  <title>Index &mdash; Graphtage v0.2.6 documentation</title>
   
 
   
@@ -23,11 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -36,6 +35,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -60,7 +61,7 @@
           
 
           
-<a href="https://github.com/trailofbits/graphtage/"><div class="version">0.3.0-git</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.2.6"><div class="version">v0.2.6</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -79,7 +80,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Using Graphtage Programmatically</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a></li>
@@ -411,6 +412,16 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.__init__">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.__init__">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLIST.__init__">(graphtage.plist.PLIST method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.__init__">(graphtage.plist.PLISTFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.__init__">(graphtage.plist.PLISTNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.__init__">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.html#graphtage.PossibleEdits.__init__">(graphtage.PossibleEdits method)</a>
 </li>
         <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.__init__">(graphtage.printer.ANSIContext method)</a>
@@ -649,6 +660,10 @@
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.__new__">(graphtage.json.JSONStringFormatter static method)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.__new__">(graphtage.plist.PLISTFormatter static method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.__new__">(graphtage.plist.PLISTSequenceFormatter static method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.__new__">(graphtage.sequences.SequenceFormatter static method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringFormatter.__new__">(graphtage.StringFormatter static method)</a>
@@ -775,6 +790,8 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.all_children_are_leaves">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.all_children_are_leaves">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.all_children_are_leaves">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElement.all_children_are_leaves">(graphtage.xml.XMLElement method)</a>
@@ -782,7 +799,7 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.ansi_color">ansi_color() (graphtage.printer.HTMLPrinter property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.ansi_color">ansi_color (graphtage.printer.HTMLPrinter property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.Printer.ansi_color">(graphtage.printer.Printer property)</a>
@@ -794,12 +811,8 @@
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.Operator.arity">arity (graphtage.expressions.Operator attribute)</a>
 </li>
-      <li><a href="graphtage.xml.html#graphtage.xml.XMLElement.attrib">attrib (graphtage.xml.XMLElement attribute)</a>
-
-      <ul>
-        <li><a href="graphtage.xml.html#graphtage.xml.XMLElementObj.attrib">(graphtage.xml.XMLElementObj attribute)</a>
+      <li><a href="graphtage.xml.html#graphtage.xml.XMLElementObj.attrib">attrib (graphtage.xml.XMLElementObj attribute)</a>
 </li>
-      </ul></li>
       <li><a href="graphtage.xml.html#graphtage.xml.XMLElementEdit.attrib_edit">attrib_edit (graphtage.xml.XMLElementEdit attribute)</a>
 </li>
   </ul></td>
@@ -808,7 +821,7 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.back">back() (graphtage.printer.ANSIContext property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.back">back (graphtage.printer.ANSIContext property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.back">(graphtage.printer.HTMLANSIContext property)</a>
@@ -826,7 +839,7 @@
       </ul></li>
       <li><a href="graphtage.formatter.html#graphtage.formatter.BasicFormatter">BasicFormatter (class in graphtage.formatter)</a>
 </li>
-      <li><a href="graphtage.search.html#graphtage.search.IterativeTighteningSearch.best_match">best_match() (graphtage.search.IterativeTighteningSearch property)</a>
+      <li><a href="graphtage.search.html#graphtage.search.IterativeTighteningSearch.best_match">best_match (graphtage.search.IterativeTighteningSearch property)</a>
 </li>
       <li><a href="graphtage.html#graphtage.PossibleEdits.best_possibility">best_possibility() (graphtage.PossibleEdits method)</a>
 </li>
@@ -929,6 +942,8 @@
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSON5.build_tree">(graphtage.json.JSON5 method)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLIST.build_tree">(graphtage.plist.PLIST method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.HTML.build_tree">(graphtage.xml.HTML method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XML.build_tree">(graphtage.xml.XML method)</a>
@@ -938,6 +953,8 @@
         <li><a href="graphtage.csv.html#graphtage.csv.build_tree">(in module graphtage.csv)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.build_tree">(in module graphtage.json)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.build_tree">(in module graphtage.plist)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.build_tree">(in module graphtage.xml)</a>
 </li>
@@ -952,6 +969,8 @@
         <li><a href="graphtage.json.html#graphtage.json.JSON.build_tree_handling_errors">(graphtage.json.JSON method)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSON5.build_tree_handling_errors">(graphtage.json.JSON5 method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLIST.build_tree_handling_errors">(graphtage.plist.PLIST method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.HTML.build_tree_handling_errors">(graphtage.xml.HTML method)</a>
 </li>
@@ -995,6 +1014,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.calculate_total_size">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.calculate_total_size">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.calculate_total_size">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.calculate_total_size">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.calculate_total_size">(graphtage.StringNode method)</a>
@@ -1008,8 +1031,12 @@
 </li>
       <li><a href="graphtage.xml.html#graphtage.xml.XMLElementEdit.child_edit">child_edit (graphtage.xml.XMLElementEdit attribute)</a>
 </li>
-      <li><a href="graphtage.xml.html#graphtage.xml.XMLElementObj.children">children (graphtage.xml.XMLElementObj attribute)</a>
+      <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.children">children (graphtage.fibonacci.HeapNode property)</a>
+
+      <ul>
+        <li><a href="graphtage.xml.html#graphtage.xml.XMLElementObj.children">(graphtage.xml.XMLElementObj attribute)</a>
 </li>
+      </ul></li>
       <li><a href="graphtage.html#graphtage.BoolNode.children">children() (graphtage.BoolNode method)</a>
 
       <ul>
@@ -1020,8 +1047,6 @@
         <li><a href="graphtage.csv.html#graphtage.csv.CSVRow.children">(graphtage.csv.CSVRow method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.DictNode.children">(graphtage.DictNode method)</a>
-</li>
-        <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.children">(graphtage.fibonacci.HeapNode property)</a>
 </li>
         <li><a href="graphtage.html#graphtage.FixedKeyDictNode.children">(graphtage.FixedKeyDictNode method)</a>
 </li>
@@ -1038,6 +1063,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.children">(graphtage.MappingNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.children">(graphtage.MultiSetNode method)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.children">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.children">(graphtage.plist.PLISTNode method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.children">(graphtage.sequences.SequenceNode method)</a>
 </li>
@@ -1066,6 +1095,8 @@
         <li><a href="graphtage.utils.html#graphtage.utils.SparseMatrix.SparseMatrixRow.clear">(graphtage.utils.SparseMatrix.SparseMatrixRow method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.close">close() (graphtage.printer.HTMLPrinter method)</a>
 
       <ul>
@@ -1074,11 +1105,9 @@
         <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.close">(graphtage.progress.StatusWriter method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.expressions.html#graphtage.expressions.CloseBracket">CloseBracket (class in graphtage.expressions)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.closed">closed() (graphtage.printer.HTMLPrinter property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.closed">closed (graphtage.printer.HTMLPrinter property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.Printer.closed">(graphtage.printer.Printer property)</a>
@@ -1120,14 +1149,14 @@
         <li><a href="graphtage.matching.html#graphtage.matching.MatchingToNode.construct_edges">(graphtage.matching.MatchingToNode method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.expressions.html#graphtage.expressions.FixedSizeCollection.container_type">container_type (graphtage.expressions.FixedSizeCollection attribute)</a>
-</li>
-      <li><a href="graphtage.csv.html#graphtage.csv.CSVNode.container_type">container_type() (graphtage.csv.CSVNode property)</a>
+      <li><a href="graphtage.csv.html#graphtage.csv.CSVNode.container_type">container_type (graphtage.csv.CSVNode property)</a>
 
       <ul>
         <li><a href="graphtage.csv.html#graphtage.csv.CSVRow.container_type">(graphtage.csv.CSVRow property)</a>
 </li>
         <li><a href="graphtage.html#graphtage.DictNode.container_type">(graphtage.DictNode property)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.FixedSizeCollection.container_type">(graphtage.expressions.FixedSizeCollection attribute)</a>
 </li>
         <li><a href="graphtage.html#graphtage.FixedKeyDictNode.container_type">(graphtage.FixedKeyDictNode property)</a>
 </li>
@@ -1166,9 +1195,9 @@
         <li><a href="graphtage.utils.html#graphtage.utils.OrderedCounter.copy">(graphtage.utils.OrderedCounter method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.matching.html#graphtage.matching.Edge.cost_bar">cost_bar() (graphtage.matching.Edge property)</a>
+      <li><a href="graphtage.matching.html#graphtage.matching.Edge.cost_bar">cost_bar (graphtage.matching.Edge property)</a>
 </li>
-      <li><a href="graphtage.matching.html#graphtage.matching.Edge.cost_star">cost_star() (graphtage.matching.Edge property)</a>
+      <li><a href="graphtage.matching.html#graphtage.matching.Edge.cost_star">cost_star (graphtage.matching.Edge property)</a>
 </li>
       <li><a href="graphtage.csv.html#graphtage.csv.CSV">CSV (class in graphtage.csv)</a>
 </li>
@@ -1217,6 +1246,10 @@
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.DEFAULT_INSTANCE">(graphtage.json.JSONStringFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.DEFAULT_INSTANCE">(graphtage.plist.PLISTFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.DEFAULT_INSTANCE">(graphtage.plist.PLISTSequenceFormatter attribute)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.DEFAULT_INSTANCE">(graphtage.sequences.SequenceFormatter attribute)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringFormatter.DEFAULT_INSTANCE">(graphtage.StringFormatter attribute)</a>
@@ -1254,6 +1287,16 @@
 </li>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.deleted">deleted (graphtage.fibonacci.HeapNode attribute)</a>
 </li>
+      <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.delimiter_callback">delimiter_callback (graphtage.xml.XMLChildFormatter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter.delimiter_callback">(graphtage.xml.XMLElementAttribFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLDictFormatter.delimiter_callback">(graphtage.yaml.YAMLDictFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLListFormatter.delimiter_callback">(graphtage.yaml.YAMLListFormatter attribute)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.version.html#graphtage.version.DEV_BUILD">DEV_BUILD (in module graphtage.version)</a>
 </li>
       <li><a href="graphtage.html#graphtage.BoolNode.dfs">dfs() (graphtage.BoolNode method)</a>
@@ -1282,6 +1325,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.dfs">(graphtage.MappingNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.dfs">(graphtage.MultiSetNode method)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.dfs">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.dfs">(graphtage.plist.PLISTNode method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.dfs">(graphtage.sequences.SequenceNode method)</a>
 </li>
@@ -1322,6 +1369,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.diff">(graphtage.MappingNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.diff">(graphtage.MultiSetNode method)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.diff">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.diff">(graphtage.plist.PLISTNode method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.diff">(graphtage.sequences.SequenceNode method)</a>
 </li>
@@ -1380,14 +1431,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.matching.html#graphtage.matching.Edge">Edge (class in graphtage.matching)</a>
 </li>
+      <li><a href="graphtage.matching.html#graphtage.matching.WeightedBipartiteMatcher.edges">edges (graphtage.matching.WeightedBipartiteMatcher property)</a>
+</li>
       <li><a href="graphtage.matching.html#graphtage.matching.MatchingFromNode.edges">edges() (graphtage.matching.MatchingFromNode method)</a>
 
       <ul>
         <li><a href="graphtage.matching.html#graphtage.matching.MatchingNode.edges">(graphtage.matching.MatchingNode method)</a>
 </li>
         <li><a href="graphtage.matching.html#graphtage.matching.MatchingToNode.edges">(graphtage.matching.MatchingToNode method)</a>
-</li>
-        <li><a href="graphtage.matching.html#graphtage.matching.WeightedBipartiteMatcher.edges">(graphtage.matching.WeightedBipartiteMatcher property)</a>
 </li>
       </ul></li>
       <li><a href="graphtage.html#graphtage.Edit">Edit (class in graphtage)</a>
@@ -1419,6 +1470,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.edit_modifiers">(graphtage.MultiSetNode attribute)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.edit_modifiers">(graphtage.NullNode attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.edit_modifiers">(graphtage.plist.PLISTNode attribute)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.edit_modifiers">(graphtage.sequences.SequenceNode attribute)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.edit_modifiers">(graphtage.StringNode attribute)</a>
@@ -1436,6 +1491,8 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONDictFormatter.edit_print">(graphtage.json.JSONDictFormatter method)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.edit_print">(graphtage.json.JSONListFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.edit_print">(graphtage.plist.PLISTSequenceFormatter method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.edit_print">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
@@ -1475,6 +1532,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.editable_dict">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.editable_dict">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.editable_dict">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.editable_dict">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.editable_dict">(graphtage.StringNode method)</a>
@@ -1488,7 +1549,7 @@
 </li>
       <li><a href="graphtage.levenshtein.html#graphtage.levenshtein.EditDistance">EditDistance (class in graphtage.levenshtein)</a>
 </li>
-      <li><a href="graphtage.html#graphtage.BoolNode.edited">edited() (graphtage.BoolNode property)</a>
+      <li><a href="graphtage.html#graphtage.BoolNode.edited">edited (graphtage.BoolNode property)</a>
 
       <ul>
         <li><a href="graphtage.html#graphtage.ContainerNode.edited">(graphtage.ContainerNode property)</a>
@@ -1516,6 +1577,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.edited">(graphtage.MappingNode property)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.edited">(graphtage.MultiSetNode property)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.edited">(graphtage.NullNode property)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.edited">(graphtage.plist.PLISTNode property)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.edited">(graphtage.sequences.SequenceNode property)</a>
 </li>
@@ -1556,6 +1621,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.edited_type">(graphtage.MappingNode class method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.edited_type">(graphtage.MultiSetNode class method)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.edited_type">(graphtage.NullNode class method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.edited_type">(graphtage.plist.PLISTNode class method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.edited_type">(graphtage.sequences.SequenceNode class method)</a>
 </li>
@@ -1611,6 +1680,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.edits">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.edits">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.edits">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.html#graphtage.PossibleEdits.edits">(graphtage.PossibleEdits method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.FixedLengthSequenceEdit.edits">(graphtage.sequences.FixedLengthSequenceEdit method)</a>
@@ -1638,7 +1711,7 @@
       </ul></li>
       <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.enabled">enabled (graphtage.printer.CombiningMarkWriter attribute)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.end_code">end_code() (graphtage.printer.ANSIContext property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.end_code">end_code (graphtage.printer.ANSIContext property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.end_code">(graphtage.printer.HTMLANSIContext property)</a>
@@ -1686,7 +1759,7 @@
 </li>
       <li><a href="graphtage.html#graphtage.FiletypeWatcher">FiletypeWatcher (class in graphtage)</a>
 </li>
-      <li><a href="graphtage.bounds.html#graphtage.bounds.Range.finite">finite() (graphtage.bounds.Range property)</a>
+      <li><a href="graphtage.bounds.html#graphtage.bounds.Range.finite">finite (graphtage.bounds.Range property)</a>
 </li>
       <li><a href="graphtage.html#graphtage.FixedKeyDictNode">FixedKeyDictNode (class in graphtage)</a>
 </li>
@@ -1714,7 +1787,7 @@
         <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.flush">(graphtage.progress.StatusWriter method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.fore">fore() (graphtage.printer.ANSIContext property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.fore">fore (graphtage.printer.ANSIContext property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.fore">(graphtage.printer.HTMLANSIContext property)</a>
@@ -1831,6 +1904,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.get_all_edits">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.get_all_edits">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.get_all_edits">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.get_all_edits">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.get_all_edits">(graphtage.StringNode method)</a>
@@ -1850,6 +1927,8 @@
         <li><a href="graphtage.json.html#graphtage.json.JSON.get_default_formatter">(graphtage.json.JSON method)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSON5.get_default_formatter">(graphtage.json.JSON5 method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLIST.get_default_formatter">(graphtage.plist.PLIST method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.HTML.get_default_formatter">(graphtage.xml.HTML method)</a>
 </li>
@@ -1884,6 +1963,10 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.get_formatter">(graphtage.json.JSONListFormatter method)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.get_formatter">(graphtage.json.JSONStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.get_formatter">(graphtage.plist.PLISTFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.get_formatter">(graphtage.plist.PLISTSequenceFormatter method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.get_formatter">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
@@ -2000,6 +2083,13 @@
 
       <ul>
         <li><a href="graphtage.multiset.html#module-graphtage.multiset">module</a>
+</li>
+      </ul></li>
+      <li>
+    graphtage.plist
+
+      <ul>
+        <li><a href="graphtage.plist.html#module-graphtage.plist">module</a>
 </li>
       </ul></li>
       <li>
@@ -2150,10 +2240,18 @@
         <li><a href="graphtage.printer.html#graphtage.printer.Printer.indent">(graphtage.printer.Printer method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.printer.html#graphtage.printer.Printer.indent_str">indent_str (graphtage.printer.Printer attribute)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.indent_str">indent_str (graphtage.printer.HTMLPrinter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.Printer.indent_str">(graphtage.printer.Printer attribute)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.Printer.indents">indents (graphtage.printer.Printer attribute)</a>
+      </ul></li>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.indents">indents (graphtage.printer.HTMLPrinter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.Printer.indents">(graphtage.printer.Printer attribute)</a>
 </li>
+      </ul></li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.Infinity">Infinity (class in graphtage.bounds)</a>
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.infix_to_rpn">infix_to_rpn() (in module graphtage.expressions)</a>
@@ -2202,7 +2300,7 @@
       </ul></li>
       <li><a href="graphtage.html#graphtage.Insert">Insert (class in graphtage)</a>
 </li>
-      <li><a href="graphtage.html#graphtage.Insert.insert_into">insert_into() (graphtage.Insert property)</a>
+      <li><a href="graphtage.html#graphtage.Insert.insert_into">insert_into (graphtage.Insert property)</a>
 </li>
       <li><a href="graphtage.html#graphtage.Insert.INSERT_STRING">INSERT_STRING (graphtage.Insert attribute)</a>
 </li>
@@ -2227,7 +2325,11 @@
 </li>
       </ul></li>
       <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.is_applied">is_applied (graphtage.printer.ANSIContext attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.is_applied">(graphtage.printer.HTMLANSIContext attribute)</a>
 </li>
+      </ul></li>
       <li><a href="graphtage.html#graphtage.AbstractCompoundEdit.is_complete">is_complete() (graphtage.AbstractCompoundEdit method)</a>
 
       <ul>
@@ -2272,7 +2374,7 @@
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementEdit.is_complete">(graphtage.xml.XMLElementEdit method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.html#graphtage.BoolNode.is_leaf">is_leaf() (graphtage.BoolNode property)</a>
+      <li><a href="graphtage.html#graphtage.BoolNode.is_leaf">is_leaf (graphtage.BoolNode property)</a>
 
       <ul>
         <li><a href="graphtage.html#graphtage.ContainerNode.is_leaf">(graphtage.ContainerNode property)</a>
@@ -2298,6 +2400,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.is_leaf">(graphtage.MappingNode property)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.is_leaf">(graphtage.MultiSetNode property)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.is_leaf">(graphtage.NullNode property)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.is_leaf">(graphtage.plist.PLISTNode property)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.is_leaf">(graphtage.sequences.SequenceNode property)</a>
 </li>
@@ -2332,6 +2438,10 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.is_partial">(graphtage.json.JSONListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.is_partial">(graphtage.json.JSONStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.is_partial">(graphtage.plist.PLISTFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.is_partial">(graphtage.plist.PLISTSequenceFormatter attribute)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.is_partial">(graphtage.sequences.SequenceFormatter attribute)</a>
 </li>
@@ -2409,6 +2519,8 @@
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.item_newline">(graphtage.json.JSONListFormatter method)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.item_newline">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.item_newline">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.item_newline">(graphtage.xml.XMLChildFormatter method)</a>
@@ -2444,6 +2556,8 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONDictFormatter.items_indent">(graphtage.json.JSONDictFormatter method)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.items_indent">(graphtage.json.JSONListFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.items_indent">(graphtage.plist.PLISTSequenceFormatter method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.items_indent">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
@@ -2488,6 +2602,8 @@
 
       <ul>
         <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.key">(graphtage.fibonacci.HeapNode attribute)</a>
+</li>
+        <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.MaxFibonacciHeap.key">(graphtage.fibonacci.MaxFibonacciHeap attribute)</a>
 </li>
       </ul></li>
       <li><a href="graphtage.utils.html#graphtage.utils.HashableCounter.keys">keys() (graphtage.utils.HashableCounter method)</a>
@@ -2573,6 +2689,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.make_edited">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.make_edited">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.make_edited">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.make_edited">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.make_edited">(graphtage.StringNode method)</a>
@@ -2586,15 +2706,15 @@
 </li>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.mark">mark (graphtage.fibonacci.HeapNode attribute)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.marks">marks() (graphtage.printer.CombiningMarkWriter property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.marks">marks (graphtage.printer.CombiningMarkWriter property)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.marks_str">marks_str() (graphtage.printer.CombiningMarkWriter property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.marks_str">marks_str (graphtage.printer.CombiningMarkWriter property)</a>
 </li>
       <li><a href="graphtage.html#graphtage.Match">Match (class in graphtage)</a>
 </li>
       <li><a href="graphtage.matching.html#graphtage.matching.Matching">Matching (class in graphtage.matching)</a>
 </li>
-      <li><a href="graphtage.matching.html#graphtage.matching.WeightedBipartiteMatcher.matching">matching() (graphtage.matching.WeightedBipartiteMatcher property)</a>
+      <li><a href="graphtage.matching.html#graphtage.matching.WeightedBipartiteMatcher.matching">matching (graphtage.matching.WeightedBipartiteMatcher property)</a>
 </li>
       <li><a href="graphtage.matching.html#graphtage.matching.MatchingFromNode">MatchingFromNode (class in graphtage.matching)</a>
 </li>
@@ -2608,17 +2728,17 @@
 </li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.min_bounded">min_bounded() (in module graphtage.bounds)</a>
 </li>
-      <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.FibonacciHeap.min_node">min_node() (graphtage.fibonacci.FibonacciHeap property)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.FibonacciHeap.min_node">min_node (graphtage.fibonacci.FibonacciHeap property)</a>
 
       <ul>
         <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.MaxFibonacciHeap.min_node">(graphtage.fibonacci.MaxFibonacciHeap property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.matching.html#graphtage.matching.min_weight_bipartite_matching">min_weight_bipartite_matching() (in module graphtage.matching)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.mode">mode() (graphtage.printer.HTMLPrinter property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.mode">mode (graphtage.printer.HTMLPrinter property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.Printer.mode">(graphtage.printer.Printer property)</a>
@@ -2649,6 +2769,8 @@
         <li><a href="graphtage.matching.html#module-graphtage.matching">graphtage.matching</a>
 </li>
         <li><a href="graphtage.multiset.html#module-graphtage.multiset">graphtage.multiset</a>
+</li>
+        <li><a href="graphtage.plist.html#module-graphtage.plist">graphtage.plist</a>
 </li>
         <li><a href="graphtage.printer.html#module-graphtage.printer">graphtage.printer</a>
 </li>
@@ -2710,10 +2832,8 @@
 </li>
         <li><a href="graphtage.expressions.html#graphtage.expressions.PairedToken.name">(graphtage.expressions.PairedToken attribute)</a>
 </li>
-      </ul></li>
-      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.name">name() (graphtage.printer.HTMLPrinter property)</a>
-
-      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.name">(graphtage.printer.HTMLPrinter property)</a>
+</li>
         <li><a href="graphtage.printer.html#graphtage.printer.Printer.name">(graphtage.printer.Printer property)</a>
 </li>
         <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.name">(graphtage.progress.StatusWriter property)</a>
@@ -2741,6 +2861,8 @@
 </li>
       <li><a href="graphtage.printer.html#graphtage.printer.NullANSIContext">NullANSIContext (class in graphtage.printer)</a>
 </li>
+      <li><a href="graphtage.html#graphtage.NullNode">NullNode (class in graphtage)</a>
+</li>
       <li><a href="graphtage.utils.html#graphtage.utils.SparseMatrix.num_cols">num_cols (graphtage.utils.SparseMatrix attribute)</a>
 
       <ul>
@@ -2759,8 +2881,38 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.expressions.html#graphtage.expressions.Token.offset">offset (graphtage.expressions.Token attribute)</a>
+      <li><a href="graphtage.expressions.html#graphtage.expressions.CloseBracket.offset">offset (graphtage.expressions.CloseBracket attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.CloseParen.offset">(graphtage.expressions.CloseParen attribute)</a>
 </li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.Comma.offset">(graphtage.expressions.Comma attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.FixedSizeCollection.offset">(graphtage.expressions.FixedSizeCollection attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.FloatToken.offset">(graphtage.expressions.FloatToken attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.FunctionCall.offset">(graphtage.expressions.FunctionCall attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.IdentifierToken.offset">(graphtage.expressions.IdentifierToken attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.IntegerToken.offset">(graphtage.expressions.IntegerToken attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.NumericToken.offset">(graphtage.expressions.NumericToken attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.OpenBracket.offset">(graphtage.expressions.OpenBracket attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.OpenParen.offset">(graphtage.expressions.OpenParen attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.OperatorToken.offset">(graphtage.expressions.OperatorToken attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.Parenthesis.offset">(graphtage.expressions.Parenthesis attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.StringToken.offset">(graphtage.expressions.StringToken attribute)</a>
+</li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.Token.offset">(graphtage.expressions.Token attribute)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.html#graphtage.AbstractCompoundEdit.on_diff">on_diff() (graphtage.AbstractCompoundEdit method)</a>
 
       <ul>
@@ -2807,8 +2959,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.printer.html#graphtage.printer.only_ansi">only_ansi() (in module graphtage.printer)</a>
 </li>
-      <li><a href="graphtage.expressions.html#graphtage.expressions.OperatorToken.op">op (graphtage.expressions.OperatorToken attribute)</a>
+      <li><a href="graphtage.expressions.html#graphtage.expressions.FunctionCall.op">op (graphtage.expressions.FunctionCall attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.OpenBracket.op">(graphtage.expressions.OpenBracket attribute)</a>
 </li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.OperatorToken.op">(graphtage.expressions.OperatorToken attribute)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.OpenBracket">OpenBracket (class in graphtage.expressions)</a>
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.OpenParen">OpenParen (class in graphtage.expressions)</a>
@@ -2821,8 +2979,12 @@
 </li>
       <li><a href="graphtage.utils.html#graphtage.utils.OrderedCounter">OrderedCounter (class in graphtage.utils)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.Printer.out_stream">out_stream (graphtage.printer.Printer attribute)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.out_stream">out_stream (graphtage.printer.HTMLPrinter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.Printer.out_stream">(graphtage.printer.Printer attribute)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -2858,7 +3020,15 @@
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.parent">(graphtage.json.JSONStringFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.parent">(graphtage.plist.PLISTFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.parent">(graphtage.plist.PLISTSequenceFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.parent">(graphtage.printer.ANSIContext property)</a>
+</li>
         <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.parent">(graphtage.printer.CombiningMarkWriter attribute)</a>
+</li>
+        <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.parent">(graphtage.printer.HTMLANSIContext property)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.parent">(graphtage.sequences.SequenceFormatter attribute)</a>
 </li>
@@ -2883,12 +3053,6 @@
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLStringFormatter.parent">(graphtage.yaml.YAMLStringFormatter attribute)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.parent">parent() (graphtage.printer.ANSIContext property)</a>
-
-      <ul>
-        <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.parent">(graphtage.printer.HTMLANSIContext property)</a>
-</li>
-      </ul></li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.Parenthesis">Parenthesis (class in graphtage.expressions)</a>
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.parse">parse() (in module graphtage.expressions)</a>
@@ -2907,6 +3071,14 @@
         <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.MaxFibonacciHeap.peek">(graphtage.fibonacci.MaxFibonacciHeap method)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLIST">PLIST (class in graphtage.plist)</a>
+</li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter">PLISTFormatter (class in graphtage.plist)</a>
+</li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode">PLISTNode (class in graphtage.plist)</a>
+</li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter">PLISTSequenceFormatter (class in graphtage.plist)</a>
+</li>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.FibonacciHeap.pop">pop() (graphtage.fibonacci.FibonacciHeap method)</a>
 
       <ul>
@@ -2931,7 +3103,7 @@
         <li><a href="graphtage.utils.html#graphtage.utils.SparseMatrix.SparseMatrixRow.popitem">(graphtage.utils.SparseMatrix.SparseMatrixRow method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.bounds.html#graphtage.bounds.Infinity.positive">positive() (graphtage.bounds.Infinity property)</a>
+      <li><a href="graphtage.bounds.html#graphtage.bounds.Infinity.positive">positive (graphtage.bounds.Infinity property)</a>
 </li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.POSITIVE_INFINITY">POSITIVE_INFINITY (in module graphtage.bounds)</a>
 </li>
@@ -3012,6 +3184,14 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.print">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.print">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print">(graphtage.plist.PLISTFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.print">(graphtage.plist.PLISTNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.print">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.html#graphtage.PossibleEdits.print">(graphtage.PossibleEdits method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.Remove.print">(graphtage.Remove method)</a>
@@ -3059,6 +3239,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print_BoolNode">print_BoolNode() (graphtage.plist.PLISTFormatter method)</a>
+</li>
       <li><a href="graphtage.json.html#graphtage.json.JSONFormatter.print_ContainerNode">print_ContainerNode() (graphtage.json.JSONFormatter method)</a>
 
       <ul>
@@ -3069,9 +3251,15 @@
 </li>
       <li><a href="graphtage.csv.html#graphtage.csv.CSVRowFormatter.print_CSVRow">print_CSVRow() (graphtage.csv.CSVRowFormatter method)</a>
 </li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print_FloatNode">print_FloatNode() (graphtage.plist.PLISTFormatter method)</a>
+</li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print_IntegerNode">print_IntegerNode() (graphtage.plist.PLISTFormatter method)</a>
+</li>
       <li><a href="graphtage.json.html#graphtage.json.JSONFormatter.print_KeyValuePairNode">print_KeyValuePairNode() (graphtage.json.JSONFormatter method)</a>
 
       <ul>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.print_KeyValuePairNode">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter.print_KeyValuePairNode">(graphtage.xml.XMLElementAttribFormatter method)</a>
 </li>
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLKeyValuePairFormatter.print_KeyValuePairNode">(graphtage.yaml.YAMLKeyValuePairFormatter method)</a>
@@ -3082,6 +3270,8 @@
       <ul>
         <li><a href="graphtage.json.html#graphtage.json.JSONFormatter.print_LeafNode">(graphtage.json.JSONFormatter method)</a>
 </li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print_LeafNode">(graphtage.plist.PLISTFormatter method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLFormatter.print_LeafNode">(graphtage.xml.XMLFormatter method)</a>
 </li>
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLFormatter.print_LeafNode">(graphtage.yaml.YAMLFormatter method)</a>
@@ -3090,6 +3280,8 @@
       <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.print_ListNode">print_ListNode() (graphtage.json.JSONListFormatter method)</a>
 
       <ul>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.print_ListNode">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.print_ListNode">(graphtage.xml.XMLChildFormatter method)</a>
 </li>
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLListFormatter.print_ListNode">(graphtage.yaml.YAMLListFormatter method)</a>
@@ -3098,6 +3290,8 @@
       <li><a href="graphtage.json.html#graphtage.json.JSONDictFormatter.print_MappingNode">print_MappingNode() (graphtage.json.JSONDictFormatter method)</a>
 
       <ul>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.print_MappingNode">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter.print_MappingNode">(graphtage.xml.XMLElementAttribFormatter method)</a>
 </li>
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLDictFormatter.print_MappingNode">(graphtage.yaml.YAMLDictFormatter method)</a>
@@ -3106,11 +3300,15 @@
       <li><a href="graphtage.json.html#graphtage.json.JSONDictFormatter.print_MultiSetNode">print_MultiSetNode() (graphtage.json.JSONDictFormatter method)</a>
 
       <ul>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.print_MultiSetNode">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter.print_MultiSetNode">(graphtage.xml.XMLElementAttribFormatter method)</a>
 </li>
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLDictFormatter.print_MultiSetNode">(graphtage.yaml.YAMLDictFormatter method)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print_PLISTNode">print_PLISTNode() (graphtage.plist.PLISTFormatter method)</a>
+</li>
       <li><a href="graphtage.csv.html#graphtage.csv.CSVRowFormatter.print_SequenceNode">print_SequenceNode() (graphtage.csv.CSVRowFormatter method)</a>
 
       <ul>
@@ -3119,6 +3317,8 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONDictFormatter.print_SequenceNode">(graphtage.json.JSONDictFormatter method)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.print_SequenceNode">(graphtage.json.JSONListFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.print_SequenceNode">(graphtage.plist.PLISTSequenceFormatter method)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.print_SequenceNode">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
@@ -3144,6 +3344,8 @@
       <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.print_StringNode">print_StringNode() (graphtage.json.JSONStringFormatter method)</a>
 
       <ul>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.print_StringNode">(graphtage.plist.PLISTFormatter method)</a>
+</li>
         <li><a href="graphtage.html#graphtage.StringFormatter.print_StringNode">(graphtage.StringFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLStringFormatter.print_StringNode">(graphtage.xml.XMLStringFormatter method)</a>
@@ -3175,10 +3377,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.matching.html#graphtage.matching.QueueElement">QueueElement (class in graphtage.matching)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.quiet">quiet (graphtage.progress.StatusWriter attribute)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.quiet">quiet (graphtage.printer.HTMLPrinter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.Printer.quiet">(graphtage.printer.Printer attribute)</a>
 </li>
+        <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.quiet">(graphtage.progress.StatusWriter attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -3187,7 +3393,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.bounds.html#graphtage.bounds.Range">Range (class in graphtage.bounds)</a>
 </li>
-      <li><a href="graphtage.expressions.html#graphtage.expressions.CloseBracket.raw_token">raw_token() (graphtage.expressions.CloseBracket property)</a>
+      <li><a href="graphtage.expressions.html#graphtage.expressions.CloseBracket.raw_token">raw_token (graphtage.expressions.CloseBracket property)</a>
 
       <ul>
         <li><a href="graphtage.expressions.html#graphtage.expressions.CloseParen.raw_token">(graphtage.expressions.CloseParen property)</a>
@@ -3273,8 +3479,6 @@
 </li>
       <li><a href="graphtage.html#graphtage.Remove">Remove (class in graphtage)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.FibonacciHeap.remove">remove() (graphtage.fibonacci.FibonacciHeap method)</a>
 
       <ul>
@@ -3287,6 +3491,8 @@
         <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.remove">(graphtage.printer.CombiningMarkWriter method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.search.html#graphtage.search.IterativeTighteningSearch.remove_best">remove_best() (graphtage.search.IterativeTighteningSearch method)</a>
 </li>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.remove_child">remove_child() (graphtage.fibonacci.HeapNode method)</a>
@@ -3301,7 +3507,7 @@
 </li>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.right">right (graphtage.fibonacci.HeapNode attribute)</a>
 </li>
-      <li><a href="graphtage.csv.html#graphtage.csv.CSVFormatter.root">root() (graphtage.csv.CSVFormatter property)</a>
+      <li><a href="graphtage.csv.html#graphtage.csv.CSVFormatter.root">root (graphtage.csv.CSVFormatter property)</a>
 
       <ul>
         <li><a href="graphtage.csv.html#graphtage.csv.CSVRowFormatter.root">(graphtage.csv.CSVRowFormatter property)</a>
@@ -3321,6 +3527,10 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.root">(graphtage.json.JSONListFormatter property)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.root">(graphtage.json.JSONStringFormatter property)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.root">(graphtage.plist.PLISTFormatter property)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.root">(graphtage.plist.PLISTSequenceFormatter property)</a>
 </li>
         <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.root">(graphtage.printer.ANSIContext property)</a>
 </li>
@@ -3379,7 +3589,7 @@
         <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.seekable">(graphtage.progress.StatusWriter method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.html#graphtage.FixedKeyDictNodeEdit.sequence">sequence() (graphtage.FixedKeyDictNodeEdit property)</a>
+      <li><a href="graphtage.html#graphtage.FixedKeyDictNodeEdit.sequence">sequence (graphtage.FixedKeyDictNodeEdit property)</a>
 
       <ul>
         <li><a href="graphtage.levenshtein.html#graphtage.levenshtein.EditDistance.sequence">(graphtage.levenshtein.EditDistance property)</a>
@@ -3411,7 +3621,7 @@
         <li><a href="graphtage.utils.html#graphtage.utils.SparseMatrix.SparseMatrixRow.shape">(graphtage.utils.SparseMatrix.SparseMatrixRow method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.siblings">siblings() (graphtage.fibonacci.HeapNode property)</a>
+      <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.HeapNode.siblings">siblings (graphtage.fibonacci.HeapNode property)</a>
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.FixedSizeCollection.size">size (graphtage.expressions.FixedSizeCollection attribute)</a>
 </li>
@@ -3421,7 +3631,7 @@
 </li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.sort">sort() (in module graphtage.bounds)</a>
 </li>
-      <li><a href="graphtage.matching.html#graphtage.matching.MatchingFromNode.sorted_neighbors">sorted_neighbors() (graphtage.matching.MatchingFromNode property)</a>
+      <li><a href="graphtage.matching.html#graphtage.matching.MatchingFromNode.sorted_neighbors">sorted_neighbors (graphtage.matching.MatchingFromNode property)</a>
 </li>
       <li><a href="graphtage.matching.html#graphtage.matching.SortedEdges">SortedEdges (class in graphtage.matching)</a>
 </li>
@@ -3429,7 +3639,7 @@
 </li>
       <li><a href="graphtage.utils.html#graphtage.utils.SparseMatrix.SparseMatrixRow">SparseMatrix.SparseMatrixRow (class in graphtage.utils)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.start_code">start_code() (graphtage.printer.ANSIContext property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.start_code">start_code (graphtage.printer.ANSIContext property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.start_code">(graphtage.printer.HTMLANSIContext property)</a>
@@ -3443,9 +3653,17 @@
         <li><a href="graphtage.expressions.html#graphtage.expressions.PairedEndToken.start_token_type">(graphtage.expressions.PairedEndToken attribute)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.status_stream">status_stream (graphtage.progress.StatusWriter attribute)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.status_stream">status_stream (graphtage.printer.HTMLPrinter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.Printer.status_stream">(graphtage.printer.Printer attribute)</a>
 </li>
+        <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.status_stream">(graphtage.progress.StatusWriter attribute)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter">StatusWriter (class in graphtage.progress)</a>
+</li>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.stream">stream (graphtage.printer.HTMLANSIContext attribute)</a>
 </li>
       <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.strike">strike() (graphtage.printer.HTMLPrinter method)</a>
 
@@ -3463,7 +3681,7 @@
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.StringToken">StringToken (class in graphtage.expressions)</a>
 </li>
-      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.style">style() (graphtage.printer.ANSIContext property)</a>
+      <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.style">style (graphtage.printer.ANSIContext property)</a>
 
       <ul>
         <li><a href="graphtage.printer.html#graphtage.printer.HTMLANSIContext.style">(graphtage.printer.HTMLANSIContext property)</a>
@@ -3489,6 +3707,10 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.sub_format_types">(graphtage.json.JSONListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.sub_format_types">(graphtage.json.JSONStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.sub_format_types">(graphtage.plist.PLISTFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.sub_format_types">(graphtage.plist.PLISTSequenceFormatter attribute)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.sub_format_types">(graphtage.sequences.SequenceFormatter attribute)</a>
 </li>
@@ -3535,6 +3757,10 @@
         <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter.sub_formatters">(graphtage.json.JSONListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.sub_formatters">(graphtage.json.JSONStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.sub_formatters">(graphtage.plist.PLISTFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter.sub_formatters">(graphtage.plist.PLISTSequenceFormatter attribute)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.sub_formatters">(graphtage.sequences.SequenceFormatter attribute)</a>
 </li>
@@ -3675,10 +3901,12 @@
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementEdit.tighten_bounds">(graphtage.xml.XMLElementEdit method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.multiset.html#graphtage.multiset.MultiSetEdit.to_insert">to_insert (graphtage.multiset.MultiSetEdit attribute)</a>
+      <li><a href="graphtage.html#graphtage.Insert.to_insert">to_insert (graphtage.Insert property)</a>
+
+      <ul>
+        <li><a href="graphtage.multiset.html#graphtage.multiset.MultiSetEdit.to_insert">(graphtage.multiset.MultiSetEdit attribute)</a>
 </li>
-      <li><a href="graphtage.html#graphtage.Insert.to_insert">to_insert() (graphtage.Insert property)</a>
-</li>
+      </ul></li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.Range.to_interval">to_interval() (graphtage.bounds.Range method)</a>
 </li>
       <li><a href="graphtage.html#graphtage.BoolNode.to_obj">to_obj() (graphtage.BoolNode method)</a>
@@ -3708,6 +3936,10 @@
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.to_obj">(graphtage.MultiSetNode method)</a>
 </li>
+        <li><a href="graphtage.html#graphtage.NullNode.to_obj">(graphtage.NullNode method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.to_obj">(graphtage.plist.PLISTNode method)</a>
+</li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.to_obj">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.to_obj">(graphtage.StringNode method)</a>
@@ -3729,7 +3961,7 @@
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.Tokenizer">Tokenizer (class in graphtage.expressions)</a>
 </li>
-      <li><a href="graphtage.html#graphtage.BoolNode.total_size">total_size() (graphtage.BoolNode property)</a>
+      <li><a href="graphtage.html#graphtage.BoolNode.total_size">total_size (graphtage.BoolNode property)</a>
 
       <ul>
         <li><a href="graphtage.html#graphtage.ContainerNode.total_size">(graphtage.ContainerNode property)</a>
@@ -3755,6 +3987,10 @@
         <li><a href="graphtage.html#graphtage.MappingNode.total_size">(graphtage.MappingNode property)</a>
 </li>
         <li><a href="graphtage.html#graphtage.MultiSetNode.total_size">(graphtage.MultiSetNode property)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.NullNode.total_size">(graphtage.NullNode property)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTNode.total_size">(graphtage.plist.PLISTNode property)</a>
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.total_size">(graphtage.sequences.SequenceNode property)</a>
 </li>
@@ -3835,7 +4071,7 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.html#graphtage.AbstractCompoundEdit.valid">valid() (graphtage.AbstractCompoundEdit property)</a>
+      <li><a href="graphtage.html#graphtage.AbstractCompoundEdit.valid">valid (graphtage.AbstractCompoundEdit property)</a>
 
       <ul>
         <li><a href="graphtage.html#graphtage.AbstractEdit.valid">(graphtage.AbstractEdit property)</a>
@@ -3879,8 +4115,14 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.expressions.html#graphtage.expressions.NumericToken.value">value (graphtage.expressions.NumericToken attribute)</a>
+      <li><a href="graphtage.expressions.html#graphtage.expressions.FloatToken.value">value (graphtage.expressions.FloatToken attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.IntegerToken.value">(graphtage.expressions.IntegerToken attribute)</a>
 </li>
+        <li><a href="graphtage.expressions.html#graphtage.expressions.NumericToken.value">(graphtage.expressions.NumericToken attribute)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.utils.html#graphtage.utils.HashableCounter.values">values() (graphtage.utils.HashableCounter method)</a>
 
       <ul>
@@ -3949,10 +4191,20 @@
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLStringFormatter.write_end_quote">(graphtage.yaml.YAMLStringFormatter method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLFormatter.write_obj">write_obj() (graphtage.yaml.YAMLFormatter static method)</a>
+      <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.write_obj">write_obj() (graphtage.plist.PLISTFormatter static method)</a>
+
+      <ul>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLFormatter.write_obj">(graphtage.yaml.YAMLFormatter static method)</a>
 </li>
-      <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.write_raw">write_raw (graphtage.progress.StatusWriter attribute)</a>
+      </ul></li>
+      <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.write_raw">write_raw (graphtage.printer.HTMLPrinter attribute)</a>
+
+      <ul>
+        <li><a href="graphtage.printer.html#graphtage.printer.Printer.write_raw">(graphtage.printer.Printer attribute)</a>
 </li>
+        <li><a href="graphtage.progress.html#graphtage.progress.StatusWriter.write_raw">(graphtage.progress.StatusWriter attribute)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter.write_start_quote">write_start_quote() (graphtage.json.JSONStringFormatter method)</a>
 
       <ul>
@@ -4063,7 +4315,7 @@
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        0.3.0-git
+        v0.2.6
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
@@ -4071,6 +4323,11 @@
           <dt>Versions</dt>
           
             <dd><a href="/graphtage/latest">latest</a></dd>
+            <dd><a href="/graphtage/v0.2.6">0.2.6</a></dd>
+            <dd><a href="/graphtage/v0.2.5">0.2.5</a></dd>
+            <dd><a href="/graphtage/v0.2.4">0.2.4</a></dd>
+            <dd><a href="/graphtage/v0.2.3">0.2.3</a></dd>
+            <dd><a href="/graphtage/v0.2.2">0.2.2</a></dd>
             <dd><a href="/graphtage/v0.2.1">0.2.1</a></dd>
             <dd><a href="/graphtage/v0.2.0">0.2.0</a></dd>
             <dd><a href="/graphtage/v0.1.1">0.1.1</a></dd>
