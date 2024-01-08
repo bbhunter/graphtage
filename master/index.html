@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Graphtage Documentation &mdash; Graphtage v0.3.0 documentation</title>
+  <title>Graphtage Documentation &mdash; Graphtage v0.3.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/index.html"/>
@@ -34,7 +34,7 @@
           <a href="#" class="icon icon-home">
             Graphtage
           </a>
-<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.0"><div class="version">v0.3.0</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.1"><div class="version">v0.3.1</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -115,6 +115,16 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="builders.html">Constructing Graphtage Trees</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="builders.html#expanding-children">Expanding Children</a></li>
+<li class="toctree-l3"><a class="reference internal" href="builders.html#custom-nodes">Custom Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="filetypes.html">Defining New Filetypes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="filetypes.html#filetype-matching">Filetype Matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filetypes.html#implementing-a-new-filetype">Implementing a New Filetype</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="printing.html">Printing Protocol</a></li>
 </ul>
 </li>
@@ -174,6 +184,20 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.ast.html">graphtage.ast</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.ast.html#ast-classes">ast classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#assignment">Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#call">Call</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#callarguments">CallArguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#callkeywords">CallKeywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#import">Import</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#keywordargument">KeywordArgument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#module">Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.ast.html#subscript">Subscript</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.bounds.html">graphtage.bounds</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.bounds.html#graphtage.bounds.NEGATIVE_INFINITY"><code class="docutils literal notranslate"><span class="pre">NEGATIVE_INFINITY</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.bounds.html#graphtage.bounds.POSITIVE_INFINITY"><code class="docutils literal notranslate"><span class="pre">POSITIVE_INFINITY</span></code></a></li>
@@ -190,6 +214,15 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 <li class="toctree-l4"><a class="reference internal" href="graphtage.bounds.html#min-bounded">min_bounded</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.bounds.html#repeat-until-tightened">repeat_until_tightened</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.bounds.html#sort">sort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.builder.html">graphtage.builder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.builder.html#builder-classes">builder classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.builder.html#basicbuilder">BasicBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.builder.html#builder">Builder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.builder.html#cyclicreference">CyclicReference</a></li>
 </ul>
 </li>
 </ul>
@@ -215,6 +248,14 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </li>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.csv.html#csv-functions">csv functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.csv.html#build-tree">build_tree</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.dataclasses.html">graphtage.dataclasses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.dataclasses.html#dataclasses-classes">dataclasses classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.dataclasses.html#dataclassedit">DataClassEdit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.dataclasses.html#dataclassnode">DataClassNode</a></li>
 </ul>
 </li>
 </ul>
@@ -346,6 +387,21 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.object_set.html">graphtage.object_set</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.object_set.html#object-set-classes">object_set classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.object_set.html#identityhash">IdentityHash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.object_set.html#objectset">ObjectSet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.pickle.html">graphtage.pickle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.pickle.html#pickle-classes">pickle classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pickle.html#pickle">Pickle</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.plist.html">graphtage.plist</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.plist.html#plist-classes">plist classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.plist.html#plist">PLIST</a></li>
@@ -369,6 +425,7 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#htmlansicontext">HTMLANSIContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#htmlprinter">HTMLPrinter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#nullansicontext">NullANSIContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#nullwriter">NullWriter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#printer">Printer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#rawwriter">RawWriter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#writer">Writer</a></li>
@@ -389,18 +446,24 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.pydiff.html">graphtage.pydiff</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.pydiff.html#pydiff-classes">pydiff classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#astbuilder">ASTBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyalias">PyAlias</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pydictformatter">PyDictFormatter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pydiffformatter">PyDiffFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyimportformatter">PyImportFormatter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pylistformatter">PyListFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pymoduleformatter">PyModuleFormatter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobj">PyObj</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobjattribute">PyObjAttribute</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobjattributes">PyObjAttributes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobjbuilder">PyObjBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobjedit">PyObjEdit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobjfixedattributes">PyObjFixedAttributes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#pyobjformatter">PyObjFormatter</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.pydiff.html#pydiff-functions">pydiff functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#ast-to-tree">ast_to_tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#build-tree">build_tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#diff">diff</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.pydiff.html#print-diff">print_diff</a></li>
@@ -534,7 +597,7 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        v0.3.0
+        v0.3.1
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
@@ -542,6 +605,7 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
           <dt>Versions</dt>
           
             <dd><a href="/graphtage/latest">latest</a></dd>
+            <dd><a href="/graphtage/v0.3.1">0.3.1</a></dd>
             <dd><a href="/graphtage/v0.3.0">0.3.0</a></dd>
             <dd><a href="/graphtage/v0.2.9">0.2.9</a></dd>
             <dd><a href="/graphtage/v0.2.8">0.2.8</a></dd>
