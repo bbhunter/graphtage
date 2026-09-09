@@ -5,15 +5,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Graphtage v0.3.1 documentation</title>
+  <title>Index &mdash; Graphtage v0.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/genindex.html"/>
+    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/genindex.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bd95bda3"></script>
+      <script src="_static/documentation_options.js?v=97b6c874"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -32,7 +32,7 @@
           <a href="index.html" class="icon icon-home">
             Graphtage
           </a>
-<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.1"><div class="version">v0.3.1</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.4.0"><div class="version">v0.4.0</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -46,6 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Using Graphtage Programmatically</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howitworks.html">How Graphtage Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasing.html">Cutting a Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package.html">Graphtage API</a></li>
 </ul>
 
@@ -506,11 +507,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.__init__">(graphtage.toml.TOMLFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.__init__">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.__init__">(graphtage.toml.TOMLListFormatter method)</a>
 </li>
-        <li><a href="graphtage.toml.html#graphtage.toml.TOMLMapping.__init__">(graphtage.toml.TOMLMapping method)</a>
-</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.__init__">(graphtage.toml.TOMLStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.__init__">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.TreeNode.__init__">(graphtage.TreeNode method)</a>
 </li>
@@ -794,9 +797,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.__new__">(graphtage.toml.TOMLFormatter static method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.__new__">(graphtage.toml.TOMLInlineTableFormatter static method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.__new__">(graphtage.toml.TOMLListFormatter static method)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.__new__">(graphtage.toml.TOMLStringFormatter static method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.__new__">(graphtage.toml.TOMLTableFormatter static method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.__new__">(graphtage.xml.XMLChildFormatter static method)</a>
 </li>
@@ -935,6 +942,82 @@
         <li><a href="graphtage.utils.html#graphtage.utils.OrderedCounter._keep_positive">(graphtage.utils.OrderedCounter method)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.csv.html#graphtage.csv.CSVFormatter._print_node">_print_node() (graphtage.csv.CSVFormatter method)</a>
+
+      <ul>
+        <li><a href="graphtage.csv.html#graphtage.csv.CSVRowFormatter._print_node">(graphtage.csv.CSVRowFormatter method)</a>
+</li>
+        <li><a href="graphtage.csv.html#graphtage.csv.CSVRows._print_node">(graphtage.csv.CSVRows method)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.GraphtageFormatter._print_node">(graphtage.GraphtageFormatter method)</a>
+</li>
+        <li><a href="graphtage.ini.html#graphtage.ini.INIFormatter._print_node">(graphtage.ini.INIFormatter method)</a>
+</li>
+        <li><a href="graphtage.ini.html#graphtage.ini.INIListFormatter._print_node">(graphtage.ini.INIListFormatter method)</a>
+</li>
+        <li><a href="graphtage.ini.html#graphtage.ini.INIMappingFormatter._print_node">(graphtage.ini.INIMappingFormatter method)</a>
+</li>
+        <li><a href="graphtage.ini.html#graphtage.ini.INIOptionFormatter._print_node">(graphtage.ini.INIOptionFormatter method)</a>
+</li>
+        <li><a href="graphtage.ini.html#graphtage.ini.INIStringFormatter._print_node">(graphtage.ini.INIStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.json.html#graphtage.json.JSONDictFormatter._print_node">(graphtage.json.JSONDictFormatter method)</a>
+</li>
+        <li><a href="graphtage.json.html#graphtage.json.JSONFormatter._print_node">(graphtage.json.JSONFormatter method)</a>
+</li>
+        <li><a href="graphtage.json.html#graphtage.json.JSONListFormatter._print_node">(graphtage.json.JSONListFormatter method)</a>
+</li>
+        <li><a href="graphtage.json.html#graphtage.json.JSONStringFormatter._print_node">(graphtage.json.JSONStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter._print_node">(graphtage.plist.PLISTFormatter method)</a>
+</li>
+        <li><a href="graphtage.plist.html#graphtage.plist.PLISTSequenceFormatter._print_node">(graphtage.plist.PLISTSequenceFormatter method)</a>
+</li>
+        <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyDictFormatter._print_node">(graphtage.pydiff.PyDictFormatter method)</a>
+</li>
+        <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyDiffFormatter._print_node">(graphtage.pydiff.PyDiffFormatter method)</a>
+</li>
+        <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyImportFormatter._print_node">(graphtage.pydiff.PyImportFormatter method)</a>
+</li>
+        <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyListFormatter._print_node">(graphtage.pydiff.PyListFormatter method)</a>
+</li>
+        <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyModuleFormatter._print_node">(graphtage.pydiff.PyModuleFormatter method)</a>
+</li>
+        <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyObjFormatter._print_node">(graphtage.pydiff.PyObjFormatter method)</a>
+</li>
+        <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter._print_node">(graphtage.sequences.SequenceFormatter method)</a>
+</li>
+        <li><a href="graphtage.html#graphtage.StringFormatter._print_node">(graphtage.StringFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter._print_node">(graphtage.toml.TOMLFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter._print_node">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter._print_node">(graphtage.toml.TOMLListFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter._print_node">(graphtage.toml.TOMLStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter._print_node">(graphtage.toml.TOMLTableFormatter method)</a>
+</li>
+        <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter._print_node">(graphtage.xml.XMLChildFormatter method)</a>
+</li>
+        <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter._print_node">(graphtage.xml.XMLElementAttribFormatter method)</a>
+</li>
+        <li><a href="graphtage.xml.html#graphtage.xml.XMLFormatter._print_node">(graphtage.xml.XMLFormatter method)</a>
+</li>
+        <li><a href="graphtage.xml.html#graphtage.xml.XMLStringFormatter._print_node">(graphtage.xml.XMLStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLDictFormatter._print_node">(graphtage.yaml.YAMLDictFormatter method)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLFormatter._print_node">(graphtage.yaml.YAMLFormatter method)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLKeyValuePairFormatter._print_node">(graphtage.yaml.YAMLKeyValuePairFormatter method)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLListFormatter._print_node">(graphtage.yaml.YAMLListFormatter method)</a>
+</li>
+        <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLStringFormatter._print_node">(graphtage.yaml.YAMLStringFormatter method)</a>
+</li>
+      </ul></li>
       <li><a href="graphtage.builder.html#graphtage.builder.BasicBuilder._resolve">_resolve() (graphtage.builder.BasicBuilder class method)</a>
 
       <ul>
@@ -945,12 +1028,16 @@
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyObjBuilder._resolve">(graphtage.pydiff.PyObjBuilder class method)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.html#graphtage.BuildOptions._resolve_check_for_cycles">_resolve_check_for_cycles() (graphtage.BuildOptions static method)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="graphtage.git.html#graphtage.git.absent_revision">absent_revision() (in module graphtage.git)</a>
+</li>
       <li><a href="graphtage.html#graphtage.AbstractCompoundEdit">AbstractCompoundEdit (class in graphtage)</a>
 </li>
       <li><a href="graphtage.html#graphtage.AbstractEdit">AbstractEdit (class in graphtage)</a>
@@ -1297,8 +1384,6 @@
 </li>
       <li><a href="graphtage.pydiff.html#graphtage.pydiff.ASTBuilder.build_constant">build_constant() (graphtage.pydiff.ASTBuilder method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.builder.html#graphtage.builder.BasicBuilder.build_dict">build_dict() (graphtage.builder.BasicBuilder method)</a>
 
       <ul>
@@ -1307,6 +1392,8 @@
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyObjBuilder.build_dict">(graphtage.pydiff.PyObjBuilder method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="graphtage.builder.html#graphtage.builder.BasicBuilder.build_float">build_float() (graphtage.builder.BasicBuilder method)</a>
 
       <ul>
@@ -1315,6 +1402,8 @@
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyObjBuilder.build_float">(graphtage.pydiff.PyObjBuilder method)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.pydiff.html#graphtage.pydiff.ASTBuilder.build_import">build_import() (graphtage.pydiff.ASTBuilder method)</a>
+</li>
       <li><a href="graphtage.pydiff.html#graphtage.pydiff.ASTBuilder.build_import_from">build_import_from() (graphtage.pydiff.ASTBuilder method)</a>
 </li>
       <li><a href="graphtage.builder.html#graphtage.builder.BasicBuilder.build_int">build_int() (graphtage.builder.BasicBuilder method)</a>
@@ -1619,8 +1708,6 @@
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceNode.children">(graphtage.sequences.SequenceNode method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.StringNode.children">(graphtage.StringNode method)</a>
-</li>
-        <li><a href="graphtage.toml.html#graphtage.toml.TOMLMapping.children">(graphtage.toml.TOMLMapping method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.TreeNode.children">(graphtage.TreeNode method)</a>
 </li>
@@ -2062,9 +2149,13 @@
       <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.DEFAULT_INSTANCE">DEFAULT_INSTANCE (graphtage.toml.TOMLFormatter attribute)</a>
 
       <ul>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.DEFAULT_INSTANCE">(graphtage.toml.TOMLInlineTableFormatter attribute)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.DEFAULT_INSTANCE">(graphtage.toml.TOMLListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.DEFAULT_INSTANCE">(graphtage.toml.TOMLStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.DEFAULT_INSTANCE">(graphtage.toml.TOMLTableFormatter attribute)</a>
 </li>
       </ul></li>
       <li><a href="graphtage.xml.html#graphtage.xml.HTML.default_instance">default_instance (graphtage.xml.HTML attribute)</a>
@@ -2116,7 +2207,11 @@
       <ul>
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyListFormatter.delimiter_callback">(graphtage.pydiff.PyListFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.delimiter_callback">(graphtage.toml.TOMLInlineTableFormatter attribute)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.delimiter_callback">(graphtage.toml.TOMLListFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.delimiter_callback">(graphtage.toml.TOMLTableFormatter attribute)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.delimiter_callback">(graphtage.xml.XMLChildFormatter attribute)</a>
 </li>
@@ -2374,7 +2469,11 @@
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.edit_print">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.edit_print">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.edit_print">(graphtage.toml.TOMLListFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.edit_print">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.edit_print">(graphtage.xml.XMLChildFormatter method)</a>
 </li>
@@ -2717,7 +2816,7 @@
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyObjBuilder.expand_dict">(graphtage.pydiff.PyObjBuilder method)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.pydiff.html#graphtage.pydiff.ASTBuilder.expand_import_from">expand_import_from() (graphtage.pydiff.ASTBuilder method)</a>
+      <li><a href="graphtage.pydiff.html#graphtage.pydiff.ASTBuilder.expand_import">expand_import() (graphtage.pydiff.ASTBuilder method)</a>
 </li>
       <li><a href="graphtage.builder.html#graphtage.builder.BasicBuilder.expand_list">expand_list() (graphtage.builder.BasicBuilder method)</a>
 
@@ -2856,7 +2955,7 @@
 </li>
         <li><a href="graphtage.dataclasses.html#graphtage.dataclasses.DataClassEdit.from_node">(graphtage.dataclasses.DataClassEdit attribute)</a>
 </li>
-        <li><a href="graphtage.html#graphtage.Edit.from_node">(graphtage.Edit attribute)</a>, <a href="graphtage.html#id0">[1]</a>
+        <li><a href="graphtage.html#graphtage.Edit.from_node">(graphtage.Edit attribute)</a>
 </li>
         <li><a href="graphtage.html#graphtage.EditCollection.from_node">(graphtage.EditCollection attribute)</a>
 </li>
@@ -3156,9 +3255,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.get_formatter">(graphtage.toml.TOMLFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.get_formatter">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.get_formatter">(graphtage.toml.TOMLListFormatter method)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.get_formatter">(graphtage.toml.TOMLStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.get_formatter">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.get_formatter">(graphtage.xml.XMLChildFormatter method)</a>
 </li>
@@ -3276,6 +3379,13 @@
 
       <ul>
         <li><a href="graphtage.formatter.html#module-graphtage.formatter">module</a>
+</li>
+      </ul></li>
+      <li>
+    graphtage.git
+
+      <ul>
+        <li><a href="graphtage.git.html#module-graphtage.git">module</a>
 </li>
       </ul></li>
       <li>
@@ -3543,7 +3653,7 @@
 </li>
         <li><a href="graphtage.dataclasses.html#graphtage.dataclasses.DataClassEdit.initial_bounds">(graphtage.dataclasses.DataClassEdit attribute)</a>
 </li>
-        <li><a href="graphtage.html#graphtage.Edit.initial_bounds">(graphtage.Edit attribute)</a>, <a href="graphtage.html#id1">[1]</a>
+        <li><a href="graphtage.html#graphtage.Edit.initial_bounds">(graphtage.Edit attribute)</a>
 </li>
         <li><a href="graphtage.html#graphtage.EditCollection.initial_bounds">(graphtage.EditCollection attribute)</a>
 </li>
@@ -3578,6 +3688,8 @@
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementEdit.initial_bounds">(graphtage.xml.XMLElementEdit attribute)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.inline_tables">inline_tables (graphtage.toml.TOMLFormatter property)</a>
+</li>
       <li><a href="graphtage.html#graphtage.Insert">Insert (class in graphtage)</a>
 </li>
       <li><a href="graphtage.html#graphtage.Insert.insert_into">insert_into (graphtage.Insert property)</a>
@@ -3831,9 +3943,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.is_partial">(graphtage.toml.TOMLFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.is_partial">(graphtage.toml.TOMLInlineTableFormatter attribute)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.is_partial">(graphtage.toml.TOMLListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.is_partial">(graphtage.toml.TOMLStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.is_partial">(graphtage.toml.TOMLTableFormatter attribute)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.is_partial">(graphtage.xml.XMLChildFormatter attribute)</a>
 </li>
@@ -3868,6 +3984,8 @@
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLStringFormatter.is_quoted">(graphtage.yaml.YAMLStringFormatter attribute)</a>
 </li>
       </ul></li>
+      <li><a href="graphtage.toml.html#graphtage.toml.is_table">is_table() (in module graphtage.toml)</a>
+</li>
       <li><a href="graphtage.printer.html#graphtage.printer.CombiningMarkWriter.isatty">isatty() (graphtage.printer.CombiningMarkWriter method)</a>
 
       <ul>
@@ -3933,7 +4051,11 @@
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.item_newline">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.item_newline">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.item_newline">(graphtage.toml.TOMLListFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.item_newline">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.item_newline">(graphtage.xml.XMLChildFormatter method)</a>
 </li>
@@ -3971,8 +4093,6 @@
 </li>
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyObjFixedAttributes.items">(graphtage.pydiff.PyObjFixedAttributes method)</a>
 </li>
-        <li><a href="graphtage.toml.html#graphtage.toml.TOMLMapping.items">(graphtage.toml.TOMLMapping method)</a>
-</li>
         <li><a href="graphtage.utils.html#graphtage.utils.HashableCounter.items">(graphtage.utils.HashableCounter method)</a>
 </li>
         <li><a href="graphtage.utils.html#graphtage.utils.OrderedCounter.items">(graphtage.utils.OrderedCounter method)</a>
@@ -4009,7 +4129,11 @@
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.items_indent">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.items_indent">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.items_indent">(graphtage.toml.TOMLListFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.items_indent">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.items_indent">(graphtage.xml.XMLChildFormatter method)</a>
 </li>
@@ -4057,6 +4181,8 @@
 </li>
       </ul></li>
       <li><a href="graphtage.html#graphtage.KeyValuePairEdit.key_edit">key_edit (graphtage.KeyValuePairEdit attribute)</a>
+</li>
+      <li><a href="graphtage.toml.html#graphtage.toml.key_value_pairs">key_value_pairs() (in module graphtage.toml)</a>
 </li>
       <li><a href="graphtage.utils.html#graphtage.utils.HashableCounter.keys">keys() (graphtage.utils.HashableCounter method)</a>
 
@@ -4116,6 +4242,8 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="graphtage.git.html#graphtage.git.main">main() (in module graphtage.git)</a>
+</li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.make_distinct">make_distinct() (in module graphtage.bounds)</a>
 </li>
       <li><a href="graphtage.ast.html#graphtage.ast.Assignment.make_edited">make_edited() (graphtage.ast.Assignment method)</a>
@@ -4236,6 +4364,8 @@
 </li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.Operator.MEMBER_ACCESS">MEMBER_ACCESS (graphtage.expressions.Operator attribute)</a>
 </li>
+      <li><a href="graphtage.git.html#graphtage.git.mime_options">mime_options() (in module graphtage.git)</a>
+</li>
       <li><a href="graphtage.bounds.html#graphtage.bounds.min_bounded">min_bounded() (in module graphtage.bounds)</a>
 </li>
       <li><a href="graphtage.fibonacci.html#graphtage.fibonacci.FibonacciHeap.min_node">min_node (graphtage.fibonacci.FibonacciHeap property)</a>
@@ -4279,6 +4409,8 @@
         <li><a href="graphtage.fibonacci.html#module-graphtage.fibonacci">graphtage.fibonacci</a>
 </li>
         <li><a href="graphtage.formatter.html#module-graphtage.formatter">graphtage.formatter</a>
+</li>
+        <li><a href="graphtage.git.html#module-graphtage.git">graphtage.git</a>
 </li>
         <li><a href="graphtage.ini.html#module-graphtage.ini">graphtage.ini</a>
 </li>
@@ -4373,14 +4505,12 @@
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyAlias.name">(graphtage.pydiff.PyAlias attribute)</a>
 </li>
       </ul></li>
-      <li><a href="graphtage.toml.html#graphtage.toml.TOMLMapping.name_segments">name_segments (graphtage.toml.TOMLMapping property)</a>
-</li>
       <li><a href="graphtage.ast.html#graphtage.ast.Import.names">names (graphtage.ast.Import attribute)</a>
+</li>
+      <li><a href="graphtage.bounds.html#graphtage.bounds.NEGATIVE_INFINITY">NEGATIVE_INFINITY (in module graphtage.bounds)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="graphtage.bounds.html#graphtage.bounds.NEGATIVE_INFINITY">NEGATIVE_INFINITY (in module graphtage.bounds)</a>
-</li>
       <li><a href="graphtage.printer.html#graphtage.printer.HTMLPrinter.newline">newline() (graphtage.printer.HTMLPrinter method)</a>
 
       <ul>
@@ -4396,6 +4526,8 @@
 </li>
       </ul></li>
       <li><a href="graphtage.expressions.html#graphtage.expressions.Operator.NOT_EQUAL">NOT_EQUAL (graphtage.expressions.Operator attribute)</a>
+</li>
+      <li><a href="graphtage.printer.html#graphtage.printer.NULL_PRINTER">NULL_PRINTER (in module graphtage.printer)</a>
 </li>
       <li><a href="graphtage.printer.html#graphtage.printer.NullANSIContext">NullANSIContext (class in graphtage.printer)</a>
 </li>
@@ -4676,9 +4808,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.parent">(graphtage.toml.TOMLFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.parent">(graphtage.toml.TOMLInlineTableFormatter attribute)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.parent">(graphtage.toml.TOMLListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.parent">(graphtage.toml.TOMLStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.parent">(graphtage.toml.TOMLTableFormatter attribute)</a>
 </li>
         <li><a href="graphtage.html#graphtage.TreeNode.parent">(graphtage.TreeNode property)</a>
 </li>
@@ -4948,9 +5084,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.print">(graphtage.toml.TOMLFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.print">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.print">(graphtage.toml.TOMLListFormatter method)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.print">(graphtage.toml.TOMLStringFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.print">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.html#graphtage.TreeNode.print">(graphtage.TreeNode method)</a>
 </li>
@@ -5018,6 +5158,10 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.print_KeyValuePairNode">(graphtage.toml.TOMLFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.print_KeyValuePairNode">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.print_KeyValuePairNode">(graphtage.toml.TOMLTableFormatter method)</a>
+</li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter.print_KeyValuePairNode">(graphtage.xml.XMLElementAttribFormatter method)</a>
 </li>
         <li><a href="graphtage.yaml.html#graphtage.yaml.YAMLKeyValuePairFormatter.print_KeyValuePairNode">(graphtage.yaml.YAMLKeyValuePairFormatter method)</a>
@@ -5065,6 +5209,10 @@
         <li><a href="graphtage.pydiff.html#graphtage.pydiff.PyDictFormatter.print_MappingNode">(graphtage.pydiff.PyDictFormatter method)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.print_MappingNode">(graphtage.toml.TOMLFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.print_MappingNode">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.print_MappingNode">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLElementAttribFormatter.print_MappingNode">(graphtage.xml.XMLElementAttribFormatter method)</a>
 </li>
@@ -5200,7 +5348,11 @@
 </li>
         <li><a href="graphtage.sequences.html#graphtage.sequences.SequenceFormatter.print_SequenceNode">(graphtage.sequences.SequenceFormatter method)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.print_SequenceNode">(graphtage.toml.TOMLInlineTableFormatter method)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.print_SequenceNode">(graphtage.toml.TOMLListFormatter method)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.print_SequenceNode">(graphtage.toml.TOMLTableFormatter method)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.print_SequenceNode">(graphtage.xml.XMLChildFormatter method)</a>
 </li>
@@ -5522,9 +5674,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.root">(graphtage.toml.TOMLFormatter property)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.root">(graphtage.toml.TOMLInlineTableFormatter property)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.root">(graphtage.toml.TOMLListFormatter property)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.root">(graphtage.toml.TOMLStringFormatter property)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.root">(graphtage.toml.TOMLTableFormatter property)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.root">(graphtage.xml.XMLChildFormatter property)</a>
 </li>
@@ -5631,6 +5787,8 @@
 </li>
       <li><a href="graphtage.utils.html#graphtage.utils.SparseMatrix.SparseMatrixRow">SparseMatrix.SparseMatrixRow (class in graphtage.utils)</a>
 </li>
+      <li><a href="graphtage.git.html#graphtage.git.split_options">split_options() (in module graphtage.git)</a>
+</li>
       <li><a href="graphtage.printer.html#graphtage.printer.ANSIContext.start_code">start_code (graphtage.printer.ANSIContext property)</a>
 
       <ul>
@@ -5732,9 +5890,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.sub_format_types">(graphtage.toml.TOMLFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.sub_format_types">(graphtage.toml.TOMLInlineTableFormatter attribute)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.sub_format_types">(graphtage.toml.TOMLListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.sub_format_types">(graphtage.toml.TOMLStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.sub_format_types">(graphtage.toml.TOMLTableFormatter attribute)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.sub_format_types">(graphtage.xml.XMLChildFormatter attribute)</a>
 </li>
@@ -5810,9 +5972,13 @@
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.sub_formatters">(graphtage.toml.TOMLFormatter attribute)</a>
 </li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter.sub_formatters">(graphtage.toml.TOMLInlineTableFormatter attribute)</a>
+</li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter.sub_formatters">(graphtage.toml.TOMLListFormatter attribute)</a>
 </li>
         <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter.sub_formatters">(graphtage.toml.TOMLStringFormatter attribute)</a>
+</li>
+        <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.sub_formatters">(graphtage.toml.TOMLTableFormatter attribute)</a>
 </li>
         <li><a href="graphtage.xml.html#graphtage.xml.XMLChildFormatter.sub_formatters">(graphtage.xml.XMLChildFormatter attribute)</a>
 </li>
@@ -5861,6 +6027,8 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.tables">tables (graphtage.toml.TOMLFormatter property)</a>
+</li>
       <li><a href="graphtage.xml.html#graphtage.xml.XMLElement.tag">tag (graphtage.xml.XMLElement attribute)</a>
 
       <ul>
@@ -6107,11 +6275,13 @@
 </li>
       <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter">TOMLFormatter (class in graphtage.toml)</a>
 </li>
+      <li><a href="graphtage.toml.html#graphtage.toml.TOMLInlineTableFormatter">TOMLInlineTableFormatter (class in graphtage.toml)</a>
+</li>
       <li><a href="graphtage.toml.html#graphtage.toml.TOMLListFormatter">TOMLListFormatter (class in graphtage.toml)</a>
 </li>
-      <li><a href="graphtage.toml.html#graphtage.toml.TOMLMapping">TOMLMapping (class in graphtage.toml)</a>
-</li>
       <li><a href="graphtage.toml.html#graphtage.toml.TOMLStringFormatter">TOMLStringFormatter (class in graphtage.toml)</a>
+</li>
+      <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter">TOMLTableFormatter (class in graphtage.toml)</a>
 </li>
       <li><a href="graphtage.utils.html#graphtage.utils.HashableCounter.total">total() (graphtage.utils.HashableCounter method)</a>
 
@@ -6405,6 +6575,10 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="graphtage.toml.html#graphtage.toml.TOMLTableFormatter.write_header">write_header() (graphtage.toml.TOMLTableFormatter method)</a>
+</li>
+      <li><a href="graphtage.toml.html#graphtage.toml.TOMLFormatter.write_key_value_pair">write_key_value_pair() (graphtage.toml.TOMLFormatter method)</a>
+</li>
       <li><a href="graphtage.plist.html#graphtage.plist.PLISTFormatter.write_obj">write_obj() (graphtage.plist.PLISTFormatter static method)</a>
 
       <ul>
@@ -6442,6 +6616,8 @@
 </li>
       </ul></li>
       <li><a href="graphtage.printer.html#graphtage.printer.Writer">Writer (class in graphtage.printer)</a>
+</li>
+      <li><a href="graphtage.toml.html#graphtage.toml.writes_own_section">writes_own_section() (in module graphtage.toml)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -6501,7 +6677,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Trail of Bits.</p>
+    <p>&#169; Copyright 2020-2026, Trail of Bits.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
@@ -6523,29 +6699,28 @@
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        v0.3.1
+        v0.4.0
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
         <dl>
           <dt>Versions</dt>
-          
-            <dd><a href="/graphtage/latest">latest</a></dd>
-            <dd><a href="/graphtage/v0.3.1">0.3.1</a></dd>
-            <dd><a href="/graphtage/v0.3.0">0.3.0</a></dd>
-            <dd><a href="/graphtage/v0.2.9">0.2.9</a></dd>
-            <dd><a href="/graphtage/v0.2.8">0.2.8</a></dd>
-            <dd><a href="/graphtage/v0.2.7">0.2.7</a></dd>
-            <dd><a href="/graphtage/v0.2.6">0.2.6</a></dd>
-            <dd><a href="/graphtage/v0.2.5">0.2.5</a></dd>
-            <dd><a href="/graphtage/v0.2.4">0.2.4</a></dd>
-            <dd><a href="/graphtage/v0.2.3">0.2.3</a></dd>
-            <dd><a href="/graphtage/v0.2.2">0.2.2</a></dd>
-            <dd><a href="/graphtage/v0.2.1">0.2.1</a></dd>
-            <dd><a href="/graphtage/v0.2.0">0.2.0</a></dd>
-            <dd><a href="/graphtage/v0.1.1">0.1.1</a></dd>
-            <dd><a href="/graphtage/v0.1.0">0.1.0</a></dd>
-          
+          <dd><a href="../latest/">latest</a></dd>
+          <dd><a href="../v0.4.0/">0.4.0</a></dd>
+          <dd><a href="../v0.3.1/">0.3.1</a></dd>
+          <dd><a href="../v0.3.0/">0.3.0</a></dd>
+          <dd><a href="../v0.2.9/">0.2.9</a></dd>
+          <dd><a href="../v0.2.8/">0.2.8</a></dd>
+          <dd><a href="../v0.2.7/">0.2.7</a></dd>
+          <dd><a href="../v0.2.6/">0.2.6</a></dd>
+          <dd><a href="../v0.2.5/">0.2.5</a></dd>
+          <dd><a href="../v0.2.4/">0.2.4</a></dd>
+          <dd><a href="../v0.2.3/">0.2.3</a></dd>
+          <dd><a href="../v0.2.2/">0.2.2</a></dd>
+          <dd><a href="../v0.2.1/">0.2.1</a></dd>
+          <dd><a href="../v0.2.0/">0.2.0</a></dd>
+          <dd><a href="../v0.1.1/">0.1.1</a></dd>
+          <dd><a href="../v0.1.0/">0.1.0</a></dd>
         </dl>
         <dl>
           <dt>Source Code</dt>

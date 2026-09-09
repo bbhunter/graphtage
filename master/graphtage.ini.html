@@ -6,22 +6,22 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>graphtage.ini &mdash; Graphtage v0.3.1 documentation</title>
+  <title>graphtage.ini &mdash; Graphtage v0.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/graphtage.ini.html"/>
+    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/graphtage.ini.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bd95bda3"></script>
+      <script src="_static/documentation_options.js?v=97b6c874"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="graphtage.json" href="graphtage.json.html" />
-    <link rel="prev" title="graphtage.formatter" href="graphtage.formatter.html" /> 
+    <link rel="prev" title="graphtage.git" href="graphtage.git.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,7 +35,7 @@
           <a href="index.html" class="icon icon-home">
             Graphtage
           </a>
-<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.1"><div class="version">v0.3.1</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.4.0"><div class="version">v0.4.0</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Using Graphtage Programmatically</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howitworks.html">How Graphtage Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasing.html">Cutting a Release</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="package.html">Graphtage API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="graphtage.html">graphtage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.ast.html">graphtage.ast</a></li>
@@ -61,6 +62,7 @@
 <li class="toctree-l2"><a class="reference internal" href="graphtage.expressions.html">graphtage.expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.fibonacci.html">graphtage.fibonacci</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.formatter.html">graphtage.formatter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.git.html">graphtage.git</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">graphtage.ini</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ini-classes">ini classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ini">INI</a></li>
@@ -170,7 +172,7 @@ file that <a class="reference external" href="https://docs.python.org/3/library/
 <dd class="field-even"><p>On success, the root tree node, or a string containing the error message on failure.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Union[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, <a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode">TreeNode</a>]</p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a> | <a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode">TreeNode</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -216,8 +218,24 @@ file that <a class="reference external" href="https://docs.python.org/3/library/
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="graphtage.ini.INIFormatter._print_node">
+<span class="sig-name descname"><span class="pre">_print_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIFormatter._print_node" title="Link to this definition"></a></dt>
+<dd><p>Hands a node to its formatter, suppressing that node’s edit for the duration of the call.</p>
+<p>Whether to print <code class="docutils literal notranslate"><span class="pre">node</span></code>’s edit was already settled by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GraphtageFormatter.print()</span></code>, so any re-entrant
+call for the same node must print the bare node. See <code class="xref py py-data docutils literal notranslate"><span class="pre">_NODES_BEING_PRINTED</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>printer</strong> – The printer to which to write.</p></li>
+<li><p><strong>node</strong> – The node to print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIFormatter.get_formatter">
-<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIFormatter.get_formatter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIFormatter.get_formatter" title="Link to this definition"></a></dt>
 <dd><p>Looks up a formatter for the given item using this formatter as a base.</p>
 <p>Equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get_formatter</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">base_formatter</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
@@ -246,7 +264,9 @@ file that <a class="reference external" href="https://docs.python.org/3/library/
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>printer</strong> – The printer to which to write.</p></li>
 <li><p><strong>node_or_edit</strong> – The node or edit to print.</p></li>
-<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node.</p></li>
+<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node. This is also implied to be
+:keyword:False while the node’s own formatter is on the stack, so that a formatter delegating the
+same node to a sibling formatter does not print its edit twice.</p></li>
 </ul>
 </dd>
 </dl>
@@ -265,13 +285,13 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIFormatter.sub_format_types">
-<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.14)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'graphtage.ini.INIMappingFormatter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'graphtage.ini.INIListFormatter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'graphtage.ini.INIStringFormatter'&gt;]</span></em><a class="headerlink" href="#graphtage.ini.INIFormatter.sub_format_types" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'graphtage.ini.INIMappingFormatter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'graphtage.ini.INIListFormatter'&gt;,</span> <span class="pre">&lt;class</span> <span class="pre">'graphtage.ini.INIStringFormatter'&gt;)</span></em><a class="headerlink" href="#graphtage.ini.INIFormatter.sub_format_types" title="Link to this definition"></a></dt>
 <dd><p>A list of formatter types that should be used as sub-formatters in the <a class="reference internal" href="graphtage.formatter.html#formatting-protocol"><span class="std std-ref">Formatting Protocol</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIFormatter.sub_formatters">
-<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIFormatter.sub_formatters" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIFormatter.sub_formatters" title="Link to this definition"></a></dt>
 <dd><p>The list of instantiated formatters corresponding to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Formatter.sub_format_types</span></code>.</p>
 <p>This list is automatically populated by <code class="xref py py-meth docutils literal notranslate"><span class="pre">Formatter.__new__()</span></code> and should never be manually modified.</p>
 </dd></dl>
@@ -323,6 +343,22 @@ another format as INI; reading the result back yields a single string rather tha
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="graphtage.ini.INIListFormatter._print_node">
+<span class="sig-name descname"><span class="pre">_print_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIListFormatter._print_node" title="Link to this definition"></a></dt>
+<dd><p>Hands a node to its formatter, suppressing that node’s edit for the duration of the call.</p>
+<p>Whether to print <code class="docutils literal notranslate"><span class="pre">node</span></code>’s edit was already settled by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GraphtageFormatter.print()</span></code>, so any re-entrant
+call for the same node must print the bare node. See <code class="xref py py-data docutils literal notranslate"><span class="pre">_NODES_BEING_PRINTED</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>printer</strong> – The printer to which to write.</p></li>
+<li><p><strong>node</strong> – The node to print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIListFormatter.edit_print">
 <span class="sig-name descname"><span class="pre">edit_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">edit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIListFormatter.edit_print" title="Link to this definition"></a></dt>
 <dd><p>Called when the edit for an item is to be printed.</p>
@@ -336,7 +372,7 @@ function will be a <a class="reference internal" href="graphtage.html#graphtage.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIListFormatter.get_formatter">
-<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIListFormatter.get_formatter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIListFormatter.get_formatter" title="Link to this definition"></a></dt>
 <dd><p>Looks up a formatter for the given item using this formatter as a base.</p>
 <p>Equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get_formatter</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">base_formatter</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
@@ -392,7 +428,9 @@ function will be a <a class="reference internal" href="graphtage.html#graphtage.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>printer</strong> – The printer to which to write.</p></li>
 <li><p><strong>node_or_edit</strong> – The node or edit to print.</p></li>
-<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node.</p></li>
+<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node. This is also implied to be
+:keyword:False while the node’s own formatter is on the stack, so that a formatter delegating the
+same node to a sibling formatter does not print its edit twice.</p></li>
 </ul>
 </dd>
 </dl>
@@ -448,13 +486,13 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIListFormatter.sub_format_types">
-<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.14)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#graphtage.ini.INIListFormatter.sub_format_types" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#graphtage.ini.INIListFormatter.sub_format_types" title="Link to this definition"></a></dt>
 <dd><p>A list of formatter types that should be used as sub-formatters in the <a class="reference internal" href="graphtage.formatter.html#formatting-protocol"><span class="std std-ref">Formatting Protocol</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIListFormatter.sub_formatters">
-<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIListFormatter.sub_formatters" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIListFormatter.sub_formatters" title="Link to this definition"></a></dt>
 <dd><p>The list of instantiated formatters corresponding to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Formatter.sub_format_types</span></code>.</p>
 <p>This list is automatically populated by <code class="xref py py-meth docutils literal notranslate"><span class="pre">Formatter.__new__()</span></code> and should never be manually modified.</p>
 </dd></dl>
@@ -504,6 +542,22 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="graphtage.ini.INIMappingFormatter._print_node">
+<span class="sig-name descname"><span class="pre">_print_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIMappingFormatter._print_node" title="Link to this definition"></a></dt>
+<dd><p>Hands a node to its formatter, suppressing that node’s edit for the duration of the call.</p>
+<p>Whether to print <code class="docutils literal notranslate"><span class="pre">node</span></code>’s edit was already settled by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GraphtageFormatter.print()</span></code>, so any re-entrant
+call for the same node must print the bare node. See <code class="xref py py-data docutils literal notranslate"><span class="pre">_NODES_BEING_PRINTED</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>printer</strong> – The printer to which to write.</p></li>
+<li><p><strong>node</strong> – The node to print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIMappingFormatter.edit_print">
 <span class="sig-name descname"><span class="pre">edit_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">edit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.edit_print" title="Link to this definition"></a></dt>
 <dd><p>Called when the edit for an item is to be printed.</p>
@@ -517,7 +571,7 @@ function will be a <a class="reference internal" href="graphtage.html#graphtage.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIMappingFormatter.get_formatter">
-<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.get_formatter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.get_formatter" title="Link to this definition"></a></dt>
 <dd><p>Looks up a formatter for the given item using this formatter as a base.</p>
 <p>Equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get_formatter</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">base_formatter</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
@@ -573,7 +627,9 @@ function will be a <a class="reference internal" href="graphtage.html#graphtage.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>printer</strong> – The printer to which to write.</p></li>
 <li><p><strong>node_or_edit</strong> – The node or edit to print.</p></li>
-<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node.</p></li>
+<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node. This is also implied to be
+:keyword:False while the node’s own formatter is on the stack, so that a formatter delegating the
+same node to a sibling formatter does not print its edit twice.</p></li>
 </ul>
 </dd>
 </dl>
@@ -629,13 +685,13 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIMappingFormatter.sub_format_types">
-<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.14)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[&lt;class</span> <span class="pre">'graphtage.ini.INIOptionFormatter'&gt;]</span></em><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.sub_format_types" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'graphtage.ini.INIOptionFormatter'&gt;,)</span></em><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.sub_format_types" title="Link to this definition"></a></dt>
 <dd><p>A list of formatter types that should be used as sub-formatters in the <a class="reference internal" href="graphtage.formatter.html#formatting-protocol"><span class="std std-ref">Formatting Protocol</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIMappingFormatter.sub_formatters">
-<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.sub_formatters" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIMappingFormatter.sub_formatters" title="Link to this definition"></a></dt>
 <dd><p>The list of instantiated formatters corresponding to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Formatter.sub_format_types</span></code>.</p>
 <p>This list is automatically populated by <code class="xref py py-meth docutils literal notranslate"><span class="pre">Formatter.__new__()</span></code> and should never be manually modified.</p>
 </dd></dl>
@@ -670,8 +726,24 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="graphtage.ini.INIOptionFormatter._print_node">
+<span class="sig-name descname"><span class="pre">_print_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIOptionFormatter._print_node" title="Link to this definition"></a></dt>
+<dd><p>Hands a node to its formatter, suppressing that node’s edit for the duration of the call.</p>
+<p>Whether to print <code class="docutils literal notranslate"><span class="pre">node</span></code>’s edit was already settled by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GraphtageFormatter.print()</span></code>, so any re-entrant
+call for the same node must print the bare node. See <code class="xref py py-data docutils literal notranslate"><span class="pre">_NODES_BEING_PRINTED</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>printer</strong> – The printer to which to write.</p></li>
+<li><p><strong>node</strong> – The node to print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIOptionFormatter.get_formatter">
-<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIOptionFormatter.get_formatter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIOptionFormatter.get_formatter" title="Link to this definition"></a></dt>
 <dd><p>Looks up a formatter for the given item using this formatter as a base.</p>
 <p>Equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get_formatter</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">base_formatter</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
@@ -700,7 +772,9 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>printer</strong> – The printer to which to write.</p></li>
 <li><p><strong>node_or_edit</strong> – The node or edit to print.</p></li>
-<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node.</p></li>
+<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node. This is also implied to be
+:keyword:False while the node’s own formatter is on the stack, so that a formatter delegating the
+same node to a sibling formatter does not print its edit twice.</p></li>
 </ul>
 </dd>
 </dl>
@@ -724,13 +798,13 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIOptionFormatter.sub_format_types">
-<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.14)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#graphtage.ini.INIOptionFormatter.sub_format_types" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#graphtage.ini.INIOptionFormatter.sub_format_types" title="Link to this definition"></a></dt>
 <dd><p>A list of formatter types that should be used as sub-formatters in the <a class="reference internal" href="graphtage.formatter.html#formatting-protocol"><span class="std std-ref">Formatting Protocol</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIOptionFormatter.sub_formatters">
-<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.14)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIOptionFormatter.sub_formatters" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter" title="graphtage.formatter.Formatter"><span class="pre">Formatter</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIOptionFormatter.sub_formatters" title="Link to this definition"></a></dt>
 <dd><p>The list of instantiated formatters corresponding to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Formatter.sub_format_types</span></code>.</p>
 <p>This list is automatically populated by <code class="xref py py-meth docutils literal notranslate"><span class="pre">Formatter.__new__()</span></code> and should never be manually modified.</p>
 </dd></dl>
@@ -765,6 +839,22 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="graphtage.ini.INIStringFormatter._print_node">
+<span class="sig-name descname"><span class="pre">_print_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIStringFormatter._print_node" title="Link to this definition"></a></dt>
+<dd><p>Hands a node to its formatter, suppressing that node’s edit for the duration of the call.</p>
+<p>Whether to print <code class="docutils literal notranslate"><span class="pre">node</span></code>’s edit was already settled by <code class="xref py py-meth docutils literal notranslate"><span class="pre">GraphtageFormatter.print()</span></code>, so any re-entrant
+call for the same node must print the bare node. See <code class="xref py py-data docutils literal notranslate"><span class="pre">_NODES_BEING_PRINTED</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>printer</strong> – The printer to which to write.</p></li>
+<li><p><strong>node</strong> – The node to print.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIStringFormatter.context">
 <span class="sig-name descname"><span class="pre">context</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.ini.INIStringFormatter.context" title="Link to this definition"></a></dt>
 <dd></dd></dl>
@@ -786,7 +876,7 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.ini.INIStringFormatter.get_formatter">
-<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIStringFormatter.get_formatter" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#graphtage.ini.INIStringFormatter.get_formatter" title="Link to this definition"></a></dt>
 <dd><p>Looks up a formatter for the given item using this formatter as a base.</p>
 <p>Equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">get_formatter</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="n">base_formatter</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
@@ -820,7 +910,9 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>printer</strong> – The printer to which to write.</p></li>
 <li><p><strong>node_or_edit</strong> – The node or edit to print.</p></li>
-<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node.</p></li>
+<li><p><strong>with_edits</strong> – If :keyword:True, print any edits associated with the node. This is also implied to be
+:keyword:False while the node’s own formatter is on the stack, so that a formatter delegating the
+same node to a sibling formatter does not print its edit twice.</p></li>
 </ul>
 </dd>
 </dl>
@@ -849,13 +941,13 @@ See the <a class="reference internal" href="printing.html#printing-protocol"><sp
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIStringFormatter.sub_format_types">
-<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Formatter[T]'</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#graphtage.ini.INIStringFormatter.sub_format_types" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_format_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.14)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Formatter[T]'</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#graphtage.ini.INIStringFormatter.sub_format_types" title="Link to this definition"></a></dt>
 <dd><p>A list of formatter types that should be used as sub-formatters in the <a class="reference internal" href="graphtage.formatter.html#formatting-protocol"><span class="std std-ref">Formatting Protocol</span></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="graphtage.ini.INIStringFormatter.sub_formatters">
-<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Formatter[T]'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIStringFormatter.sub_formatters" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">sub_formatters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">'Formatter[T]'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#graphtage.ini.INIStringFormatter.sub_formatters" title="Link to this definition"></a></dt>
 <dd><p>The list of instantiated formatters corresponding to <code class="xref py py-attr docutils literal notranslate"><span class="pre">Formatter.sub_format_types</span></code>.</p>
 <p>This list is automatically populated by <code class="xref py py-meth docutils literal notranslate"><span class="pre">Formatter.__new__()</span></code> and should never be manually modified.</p>
 </dd></dl>
@@ -923,14 +1015,14 @@ already automatically been configured to format them prior to the call to
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="graphtage.formatter.html" class="btn btn-neutral float-left" title="graphtage.formatter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="graphtage.git.html" class="btn btn-neutral float-left" title="graphtage.git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="graphtage.json.html" class="btn btn-neutral float-right" title="graphtage.json" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Trail of Bits.</p>
+    <p>&#169; Copyright 2020-2026, Trail of Bits.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
@@ -952,29 +1044,28 @@ already automatically been configured to format them prior to the call to
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        v0.3.1
+        v0.4.0
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
         <dl>
           <dt>Versions</dt>
-          
-            <dd><a href="/graphtage/latest">latest</a></dd>
-            <dd><a href="/graphtage/v0.3.1">0.3.1</a></dd>
-            <dd><a href="/graphtage/v0.3.0">0.3.0</a></dd>
-            <dd><a href="/graphtage/v0.2.9">0.2.9</a></dd>
-            <dd><a href="/graphtage/v0.2.8">0.2.8</a></dd>
-            <dd><a href="/graphtage/v0.2.7">0.2.7</a></dd>
-            <dd><a href="/graphtage/v0.2.6">0.2.6</a></dd>
-            <dd><a href="/graphtage/v0.2.5">0.2.5</a></dd>
-            <dd><a href="/graphtage/v0.2.4">0.2.4</a></dd>
-            <dd><a href="/graphtage/v0.2.3">0.2.3</a></dd>
-            <dd><a href="/graphtage/v0.2.2">0.2.2</a></dd>
-            <dd><a href="/graphtage/v0.2.1">0.2.1</a></dd>
-            <dd><a href="/graphtage/v0.2.0">0.2.0</a></dd>
-            <dd><a href="/graphtage/v0.1.1">0.1.1</a></dd>
-            <dd><a href="/graphtage/v0.1.0">0.1.0</a></dd>
-          
+          <dd><a href="../latest/">latest</a></dd>
+          <dd><a href="../v0.4.0/">0.4.0</a></dd>
+          <dd><a href="../v0.3.1/">0.3.1</a></dd>
+          <dd><a href="../v0.3.0/">0.3.0</a></dd>
+          <dd><a href="../v0.2.9/">0.2.9</a></dd>
+          <dd><a href="../v0.2.8/">0.2.8</a></dd>
+          <dd><a href="../v0.2.7/">0.2.7</a></dd>
+          <dd><a href="../v0.2.6/">0.2.6</a></dd>
+          <dd><a href="../v0.2.5/">0.2.5</a></dd>
+          <dd><a href="../v0.2.4/">0.2.4</a></dd>
+          <dd><a href="../v0.2.3/">0.2.3</a></dd>
+          <dd><a href="../v0.2.2/">0.2.2</a></dd>
+          <dd><a href="../v0.2.1/">0.2.1</a></dd>
+          <dd><a href="../v0.2.0/">0.2.0</a></dd>
+          <dd><a href="../v0.1.1/">0.1.1</a></dd>
+          <dd><a href="../v0.1.0/">0.1.0</a></dd>
         </dl>
         <dl>
           <dt>Source Code</dt>

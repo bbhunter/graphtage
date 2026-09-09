@@ -6,15 +6,15 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>graphtage.dataclasses &mdash; Graphtage v0.3.1 documentation</title>
+  <title>graphtage.dataclasses &mdash; Graphtage v0.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/graphtage.dataclasses.html"/>
+    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/graphtage.dataclasses.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bd95bda3"></script>
+      <script src="_static/documentation_options.js?v=97b6c874"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -35,7 +35,7 @@
           <a href="index.html" class="icon icon-home">
             Graphtage
           </a>
-<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.1"><div class="version">v0.3.1</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.4.0"><div class="version">v0.4.0</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Using Graphtage Programmatically</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howitworks.html">How Graphtage Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasing.html">Cutting a Release</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="package.html">Graphtage API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="graphtage.html">graphtage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.ast.html">graphtage.ast</a></li>
@@ -68,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="graphtage.expressions.html">graphtage.expressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.fibonacci.html">graphtage.fibonacci</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.formatter.html">graphtage.formatter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.git.html">graphtage.git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.ini.html">graphtage.ini</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.json.html">graphtage.json</a></li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.levenshtein.html">graphtage.levenshtein</a></li>
@@ -143,7 +145,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassEdit.__iter__">
-<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassEdit.__iter__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassEdit.__iter__" title="Link to this definition"></a></dt>
 <dd><p>Returns an iterator over this edit’s sub-edits.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -188,7 +190,7 @@ provided to the constructor, the upper bound defaults to:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassEdit.edits">
-<span class="sig-name descname"><span class="pre">edits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassEdit.edits" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">edits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassEdit.edits" title="Link to this definition"></a></dt>
 <dd><p>Returns an iterator over this edit’s sub-edits</p>
 </dd></dl>
 
@@ -261,13 +263,12 @@ the sub-edits:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassEdit.print">
 <span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">formatter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.GraphtageFormatter" title="graphtage.GraphtageFormatter"><span class="pre">GraphtageFormatter</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">printer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><span class="pre">Printer</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.dataclasses.DataClassEdit.print" title="Link to this definition"></a></dt>
-<dd><p>Edits can optionally implement a printing method</p>
-<p>This function is called automatically from the formatter in the
-<a class="reference internal" href="printing.html#printing-protocol"><span class="std std-ref">Printing Protocol</span></a> and should never be called directly unless you really know what you’re doing!
-Raising <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">NotImplementedError</span></code></a> will cause the formatter to fall back on its own printing implementations.</p>
-<p>This implementation is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">edit</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">edits</span><span class="p">():</span>
-    <span class="n">edit</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="n">printer</span><span class="p">)</span>
+<dd><p>Prints this edit by delegating to the formatter for the node being edited.</p>
+<p>The default <a class="reference internal" href="graphtage.html#graphtage.AbstractCompoundEdit.print" title="graphtage.AbstractCompoundEdit.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphtage.AbstractCompoundEdit.print()</span></code></a> implementation prints the slot edits back to back,
+which drops whatever syntax the node’s formatter writes between the slots. Delegating to the node formatter
+keeps that syntax, and the formatter reaches the slot edits as it prints each child.</p>
+<p>This is equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">formatter</span><span class="o">.</span><span class="n">get_formatter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">from_node</span><span class="p">)(</span><span class="n">printer</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">from_node</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -320,7 +321,7 @@ Raising <a class="reference external" href="https://docs.python.org/3/library/ex
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.add_edit_modifier">
-<span class="sig-name descname"><span class="pre">add_edit_modifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.add_edit_modifier" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">add_edit_modifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.add_edit_modifier" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -358,7 +359,7 @@ This is an arbitrary, immutable value that is used to calculate the bounded cost
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.children">
-<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.children" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Sequence" title="(in Python v3.14)"><span class="pre">Sequence</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.children" title="Link to this definition"></a></dt>
 <dd><p>The children of this node.</p>
 <p>Equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -374,13 +375,13 @@ This is an arbitrary, immutable value that is used to calculate the bounded cost
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.copy_from">
-<span class="sig-name descname"><span class="pre">copy_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterable" title="(in Python v3.14)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.copy_from" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">copy_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">children</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterable" title="(in Python v3.14)"><span class="pre">Iterable</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.copy_from" title="Link to this definition"></a></dt>
 <dd><p>Constructs a new instance of this tree node from a list of its children</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.dfs">
-<span class="sig-name descname"><span class="pre">dfs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.dfs" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">dfs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.dfs" title="Link to this definition"></a></dt>
 <dd><p>Performs a depth-first traversal over all of this node’s descendants.</p>
 <p><code class="xref py py-obj docutils literal notranslate"><span class="pre">self</span></code> is always included and yielded first.</p>
 <p>This implementation is equivalent to:</p>
@@ -406,14 +407,14 @@ This is an arbitrary, immutable value that is used to calculate the bounded cost
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">completed</span></code>.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Union[<a class="reference internal" href="graphtage.html#graphtage.EditedTreeNode" title="graphtage.EditedTreeNode">EditedTreeNode</a>, T]</p>
+<dd class="field-odd"><p><a class="reference internal" href="graphtage.html#graphtage.EditedTreeNode" title="graphtage.EditedTreeNode">EditedTreeNode</a> | T</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.editable_dict">
-<span class="sig-name descname"><span class="pre">editable_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.14)"><span class="pre">Dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.editable_dict" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">editable_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.editable_dict" title="Link to this definition"></a></dt>
 <dd><p>Copies <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.__dict__</span></code>, calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">TreeNode.editable_dict()</span></code> on any <code class="xref py py-class docutils literal notranslate"><span class="pre">TreeNode</span></code> objects therein.</p>
 <p>This is equivalent to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
@@ -453,7 +454,7 @@ This is an arbitrary, immutable value that is used to calculate the bounded cost
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.get_all_edit_contexts">
-<span class="sig-name descname"><span class="pre">get_all_edit_contexts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.14)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.14)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.get_all_edit_contexts" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_all_edit_contexts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.get_all_edit_contexts" title="Link to this definition"></a></dt>
 <dd><p>Returns an iterator over all edit contexts that will transform this node into the provided node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -472,7 +473,7 @@ node, as well as its edit. Note that this iterator will automatically
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.get_all_edits">
-<span class="sig-name descname"><span class="pre">get_all_edits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.get_all_edits" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_all_edits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><span class="pre">Edit</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.get_all_edits" title="Link to this definition"></a></dt>
 <dd><p>Returns an iterator over all edits that will transform this node into the provided node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -504,7 +505,7 @@ node, as well as its edit. Note that this iterator will automatically
 
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.items">
-<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.14)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.items" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/collections.abc.html#collections.abc.Iterator" title="(in Python v3.14)"><span class="pre">Iterator</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><span class="pre">TreeNode</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.items" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -521,7 +522,7 @@ node, as well as its edit. Note that this iterator will automatically
 and thereby mutable.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Union[<a class="reference internal" href="graphtage.html#graphtage.EditedTreeNode" title="graphtage.EditedTreeNode">EditedTreeNode</a>, T]</p>
+<dd class="field-even"><p><a class="reference internal" href="graphtage.html#graphtage.EditedTreeNode" title="graphtage.EditedTreeNode">EditedTreeNode</a> | T</p>
 </dd>
 </dl>
 </dd></dl>
@@ -539,9 +540,10 @@ you define a subclass of <code class="xref py py-class docutils literal notransl
 <dl class="py method">
 <dt class="sig sig-object py" id="graphtage.dataclasses.DataClassNode.post_init">
 <span class="sig-name descname"><span class="pre">post_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#graphtage.dataclasses.DataClassNode.post_init" title="Link to this definition"></a></dt>
-<dd><p>Callback called after this class’s members have been initialized.</p>
-<p>This callback should not call <cite>super().post_init()</cite>. Each superclass’s <cite>post_init()</cite> will be automatically
-called in order of the <cite>__mro__</cite>.</p>
+<dd><p>Callback called after this node’s slots have been initialized.</p>
+<p>This callback should not call <cite>super().post_init()</cite>. Every implementation in the class hierarchy is called
+automatically, starting with the least derived data class and ending with the class being instantiated. An
+implementation that a subclass inherits without overriding is called only once.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -605,7 +607,7 @@ options like <cite>–match-if</cite> and <cite>–match-unless</cite>.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Trail of Bits.</p>
+    <p>&#169; Copyright 2020-2026, Trail of Bits.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
@@ -627,29 +629,28 @@ options like <cite>–match-if</cite> and <cite>–match-unless</cite>.</p>
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        v0.3.1
+        v0.4.0
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
         <dl>
           <dt>Versions</dt>
-          
-            <dd><a href="/graphtage/latest">latest</a></dd>
-            <dd><a href="/graphtage/v0.3.1">0.3.1</a></dd>
-            <dd><a href="/graphtage/v0.3.0">0.3.0</a></dd>
-            <dd><a href="/graphtage/v0.2.9">0.2.9</a></dd>
-            <dd><a href="/graphtage/v0.2.8">0.2.8</a></dd>
-            <dd><a href="/graphtage/v0.2.7">0.2.7</a></dd>
-            <dd><a href="/graphtage/v0.2.6">0.2.6</a></dd>
-            <dd><a href="/graphtage/v0.2.5">0.2.5</a></dd>
-            <dd><a href="/graphtage/v0.2.4">0.2.4</a></dd>
-            <dd><a href="/graphtage/v0.2.3">0.2.3</a></dd>
-            <dd><a href="/graphtage/v0.2.2">0.2.2</a></dd>
-            <dd><a href="/graphtage/v0.2.1">0.2.1</a></dd>
-            <dd><a href="/graphtage/v0.2.0">0.2.0</a></dd>
-            <dd><a href="/graphtage/v0.1.1">0.1.1</a></dd>
-            <dd><a href="/graphtage/v0.1.0">0.1.0</a></dd>
-          
+          <dd><a href="../latest/">latest</a></dd>
+          <dd><a href="../v0.4.0/">0.4.0</a></dd>
+          <dd><a href="../v0.3.1/">0.3.1</a></dd>
+          <dd><a href="../v0.3.0/">0.3.0</a></dd>
+          <dd><a href="../v0.2.9/">0.2.9</a></dd>
+          <dd><a href="../v0.2.8/">0.2.8</a></dd>
+          <dd><a href="../v0.2.7/">0.2.7</a></dd>
+          <dd><a href="../v0.2.6/">0.2.6</a></dd>
+          <dd><a href="../v0.2.5/">0.2.5</a></dd>
+          <dd><a href="../v0.2.4/">0.2.4</a></dd>
+          <dd><a href="../v0.2.3/">0.2.3</a></dd>
+          <dd><a href="../v0.2.2/">0.2.2</a></dd>
+          <dd><a href="../v0.2.1/">0.2.1</a></dd>
+          <dd><a href="../v0.2.0/">0.2.0</a></dd>
+          <dd><a href="../v0.1.1/">0.1.1</a></dd>
+          <dd><a href="../v0.1.0/">0.1.0</a></dd>
         </dl>
         <dl>
           <dt>Source Code</dt>

@@ -6,15 +6,15 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Printing Protocol &mdash; Graphtage v0.3.1 documentation</title>
+  <title>Printing Protocol &mdash; Graphtage v0.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/printing.html"/>
+    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/printing.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bd95bda3"></script>
+      <script src="_static/documentation_options.js?v=97b6c874"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -35,7 +35,7 @@
           <a href="index.html" class="icon icon-home">
             Graphtage
           </a>
-<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.1"><div class="version">v0.3.1</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.4.0"><div class="version">v0.4.0</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -50,10 +50,16 @@
 <li class="toctree-l1 current"><a class="reference internal" href="extending.html">Extending Graphtage</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="builders.html">Constructing Graphtage Trees</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filetypes.html">Defining New Filetypes</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Printing Protocol</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Printing Protocol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#re-entering-the-protocol-with-the-same-node">Re-entering the protocol with the same node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-output">Status Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enabling-ansi-color">Enabling ANSI Color</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="howitworks.html">How Graphtage Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasing.html">Cutting a Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package.html">Graphtage API</a></li>
 </ul>
 
@@ -92,7 +98,7 @@
 <li><dl class="simple">
 <dt>If <code class="docutils literal notranslate"><span class="pre">node_or_edit</span></code> is an <a class="reference internal" href="graphtage.html#graphtage.Edit" title="graphtage.Edit"><code class="xref py py-class docutils literal notranslate"><span class="pre">graphtage.Edit</span></code></a>:</dt><dd><ul class="simple">
 <li><p>If <code class="docutils literal notranslate"><span class="pre">with_edits</span></code>, then choose the edit</p></li>
-<li><p>Otherwise, choose <a class="reference internal" href="graphtage.html#id0" title="graphtage.Edit.from_node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">node_or_edit.from_node</span></code></a></p></li>
+<li><p>Otherwise, choose <a class="reference internal" href="graphtage.html#graphtage.Edit.from_node" title="graphtage.Edit.from_node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">node_or_edit.from_node</span></code></a></p></li>
 </ul>
 </dd>
 </dl>
@@ -100,10 +106,14 @@
 <li><dl>
 <dt>If <code class="docutils literal notranslate"><span class="pre">node_or_edit</span></code> is a <a class="reference internal" href="graphtage.html#graphtage.TreeNode" title="graphtage.TreeNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">graphtage.TreeNode</span></code></a>:</dt><dd><ul>
 <li><dl>
-<dt>If <code class="docutils literal notranslate"><span class="pre">with_edits</span></code> <em>and</em> the node is edited and has a non-zero cost,</dt><dd><p>then choose <code class="xref py py-attr docutils literal notranslate"><span class="pre">node_or_edit.edit</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node_or_edit</span><span class="o">.</span><span class="n">edit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">node_or_edit</span><span class="o">.</span><span class="n">edit</span><span class="o">.</span><span class="n">bounds</span><span class="p">()</span><span class="o">.</span><span class="n">lower_bound</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<dt>If <code class="docutils literal notranslate"><span class="pre">with_edits</span></code>, the node’s own formatter is not already on the stack, <em>and</em> the node is edited and has a</dt><dd><p>non-zero cost, then choose <code class="xref py py-attr docutils literal notranslate"><span class="pre">node_or_edit.edit</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">node_or_edit</span><span class="p">,</span> <span class="n">EditedTreeNode</span><span class="p">)</span> <span class="ow">and</span> \
+        <span class="n">node_or_edit</span><span class="o">.</span><span class="n">edit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">node_or_edit</span><span class="o">.</span><span class="n">edit</span><span class="o">.</span><span class="n">has_non_zero_cost</span><span class="p">()</span>
 </pre></div>
 </div>
+<p><a class="reference internal" href="graphtage.html#graphtage.Edit.has_non_zero_cost" title="graphtage.Edit.has_non_zero_cost"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphtage.Edit.has_non_zero_cost()</span></code></a> is not a single comparison: it tightens the edit’s bounds in a
+loop until either its lower bound exceeds zero or its bounds are definitive. Deciding whether to print an
+edit can therefore do an arbitrary amount of work.</p>
 </dd>
 </dl>
 </li>
@@ -129,6 +139,7 @@
 </li>
 <li><dl class="simple">
 <dt>If the chosen object is a node, or if we failed to find a printer for the edit:</dt><dd><ul class="simple">
+<li><p>Record that this node’s formatter is on the stack, for the duration of the next two steps.</p></li>
 <li><p>See if there is a specialized formatter for this node by calling
 <a class="reference internal" href="graphtage.formatter.html#graphtage.formatter.Formatter.get_formatter" title="graphtage.formatter.Formatter.get_formatter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphtage.formatter.Formatter.get_formatter()</span></code></a></p></li>
 <li><p>If so, delegate to that formatter and return.</p></li>
@@ -141,6 +152,44 @@
 </ol>
 <p>This is implemented in <a class="reference internal" href="graphtage.html#graphtage.GraphtageFormatter.print" title="graphtage.GraphtageFormatter.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphtage.GraphtageFormatter.print()</span></code></a>. See the <a class="reference internal" href="graphtage.formatter.html#formatting-protocol"><span class="std std-ref">Formatting Protocol</span></a> for how formatters
 are chosen.</p>
+<section id="re-entering-the-protocol-with-the-same-node">
+<h2>Re-entering the protocol with the same node<a class="headerlink" href="#re-entering-the-protocol-with-the-same-node" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">with_edits</span></code> is an argument to <a class="reference internal" href="graphtage.html#graphtage.GraphtageFormatter.print" title="graphtage.GraphtageFormatter.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphtage.GraphtageFormatter.print()</span></code></a>, but it is not part of the
+<code class="docutils literal notranslate"><span class="pre">print_&lt;NodeType&gt;(printer,</span> <span class="pre">node)</span></code> calling convention that formatters implement, so it stops at the formatter
+boundary. That matters because formatters hand nodes back to the protocol: a list formatter that meets a nested dict
+has no <code class="docutils literal notranslate"><span class="pre">print_MappingNode</span></code> of its own, so it calls <code class="docutils literal notranslate"><span class="pre">self.parent.print(printer,</span> <span class="pre">node)</span></code> to reach the format’s dict
+formatter, as <a class="reference internal" href="graphtage.json.html#graphtage.json.JSONListFormatter.print_SequenceNode" title="graphtage.json.JSONListFormatter.print_SequenceNode"><code class="xref py py-meth docutils literal notranslate"><span class="pre">graphtage.json.JSONListFormatter.print_SequenceNode()</span></code></a> does. Such a call starts the protocol over
+for a node whose edit the outer call has already printed, or has deliberately declined to print.</p>
+<p>Recording the node for the duration of its own formatter is what keeps that second pass from printing the edit again.
+It applies to the node being printed only, not to its children, so an edit nested inside the delegated subtree still
+prints normally.</p>
+</section>
+<section id="status-output">
+<h2>Status Output<a class="headerlink" href="#status-output" title="Link to this heading"></a></h2>
+<p>A <a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><code class="xref py py-class docutils literal notranslate"><span class="pre">graphtage.printer.Printer</span></code></a> is also a <a class="reference internal" href="graphtage.progress.html#graphtage.progress.StatusWriter" title="graphtage.progress.StatusWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">graphtage.progress.StatusWriter</span></code></a>, which is what draws the
+<code class="docutils literal notranslate"><span class="pre">tqdm</span></code> progress bars that Graphtage shows while it diffs. Both the diff output and the status output share the same
+printer, so the printer buffers whole lines and hands them to <code class="xref py py-func docutils literal notranslate"><span class="pre">tqdm.write()</span></code> rather than letting the two
+interleave.</p>
+<p>Pass <code class="docutils literal notranslate"><span class="pre">quiet=True</span></code> to suppress the progress bars:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">graphtage.printer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Printer</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quiet_printer</span> <span class="o">=</span> <span class="n">Printer</span><span class="p">(</span><span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The command line client passes <code class="docutils literal notranslate"><span class="pre">quiet=True</span></code> for <code class="docutils literal notranslate"><span class="pre">--no-status</span></code> and <code class="docutils literal notranslate"><span class="pre">--quiet</span></code>. To suppress the output as well as
+the status, use <a class="reference internal" href="graphtage.printer.html#graphtage.printer.NULL_PRINTER" title="graphtage.printer.NULL_PRINTER"><code class="xref py py-attr docutils literal notranslate"><span class="pre">graphtage.printer.NULL_PRINTER</span></code></a>, a printer that is both quiet and writes to a stream that
+discards everything. It is the default value of <code class="xref py py-attr docutils literal notranslate"><span class="pre">graphtage.BuildOptions.printer</span></code>, which is why building a tree
+from the library draws no progress bar while the command line client does.</p>
+</section>
+<section id="enabling-ansi-color">
+<h2>Enabling ANSI Color<a class="headerlink" href="#enabling-ansi-color" title="Link to this heading"></a></h2>
+<p>Importing <a class="reference internal" href="graphtage.html#module-graphtage" title="graphtage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">graphtage</span></code></a> does not call <code class="xref py py-func docutils literal notranslate"><span class="pre">colorama.init()</span></code> and does not replace <code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stdout</span></code>. Call
+<a class="reference internal" href="graphtage.printer.html#graphtage.printer.enable_ansi_support" title="graphtage.printer.enable_ansi_support"><code class="xref py py-func docutils literal notranslate"><span class="pre">graphtage.printer.enable_ansi_support()</span></code></a> from your application’s entry point if you want that behavior. On a
+legacy Windows console it is what makes ANSI escape sequences work, by replacing <code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stdout</span></code> and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">sys.stderr</span></code> with wrappers that translate the sequences into Win32 console calls.</p>
+<p>A <a class="reference internal" href="graphtage.printer.html#graphtage.printer.Printer" title="graphtage.printer.Printer"><code class="xref py py-class docutils literal notranslate"><span class="pre">graphtage.printer.Printer</span></code></a> captures its output stream when it is constructed, so call
+<a class="reference internal" href="graphtage.printer.html#graphtage.printer.enable_ansi_support" title="graphtage.printer.enable_ansi_support"><code class="xref py py-func docutils literal notranslate"><span class="pre">graphtage.printer.enable_ansi_support()</span></code></a> before constructing any printer. A printer constructed first writes past
+the wrapper and loses its color.</p>
+</section>
 </section>
 
 
@@ -154,7 +203,7 @@ are chosen.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Trail of Bits.</p>
+    <p>&#169; Copyright 2020-2026, Trail of Bits.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
@@ -176,29 +225,28 @@ are chosen.</p>
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        v0.3.1
+        v0.4.0
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
         <dl>
           <dt>Versions</dt>
-          
-            <dd><a href="/graphtage/latest">latest</a></dd>
-            <dd><a href="/graphtage/v0.3.1">0.3.1</a></dd>
-            <dd><a href="/graphtage/v0.3.0">0.3.0</a></dd>
-            <dd><a href="/graphtage/v0.2.9">0.2.9</a></dd>
-            <dd><a href="/graphtage/v0.2.8">0.2.8</a></dd>
-            <dd><a href="/graphtage/v0.2.7">0.2.7</a></dd>
-            <dd><a href="/graphtage/v0.2.6">0.2.6</a></dd>
-            <dd><a href="/graphtage/v0.2.5">0.2.5</a></dd>
-            <dd><a href="/graphtage/v0.2.4">0.2.4</a></dd>
-            <dd><a href="/graphtage/v0.2.3">0.2.3</a></dd>
-            <dd><a href="/graphtage/v0.2.2">0.2.2</a></dd>
-            <dd><a href="/graphtage/v0.2.1">0.2.1</a></dd>
-            <dd><a href="/graphtage/v0.2.0">0.2.0</a></dd>
-            <dd><a href="/graphtage/v0.1.1">0.1.1</a></dd>
-            <dd><a href="/graphtage/v0.1.0">0.1.0</a></dd>
-          
+          <dd><a href="../latest/">latest</a></dd>
+          <dd><a href="../v0.4.0/">0.4.0</a></dd>
+          <dd><a href="../v0.3.1/">0.3.1</a></dd>
+          <dd><a href="../v0.3.0/">0.3.0</a></dd>
+          <dd><a href="../v0.2.9/">0.2.9</a></dd>
+          <dd><a href="../v0.2.8/">0.2.8</a></dd>
+          <dd><a href="../v0.2.7/">0.2.7</a></dd>
+          <dd><a href="../v0.2.6/">0.2.6</a></dd>
+          <dd><a href="../v0.2.5/">0.2.5</a></dd>
+          <dd><a href="../v0.2.4/">0.2.4</a></dd>
+          <dd><a href="../v0.2.3/">0.2.3</a></dd>
+          <dd><a href="../v0.2.2/">0.2.2</a></dd>
+          <dd><a href="../v0.2.1/">0.2.1</a></dd>
+          <dd><a href="../v0.2.0/">0.2.0</a></dd>
+          <dd><a href="../v0.1.1/">0.1.1</a></dd>
+          <dd><a href="../v0.1.0/">0.1.0</a></dd>
         </dl>
         <dl>
           <dt>Source Code</dt>

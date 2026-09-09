@@ -6,15 +6,15 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Graphtage Documentation &mdash; Graphtage v0.3.1 documentation</title>
+  <title>Graphtage Documentation &mdash; Graphtage v0.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/index.html"/>
+    <link rel="canonical" href="https://trailofbits.github.io/graphtage/latest/index.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bd95bda3"></script>
+      <script src="_static/documentation_options.js?v=97b6c874"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -34,7 +34,7 @@
           <a href="#" class="icon icon-home">
             Graphtage
           </a>
-<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.3.1"><div class="version">v0.3.1</div></a>
+<a href="https://github.com/trailofbits/graphtage/releases/tag/v0.4.0"><div class="version">v0.4.0</div></a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -48,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="library.html">Using Graphtage Programmatically</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="howitworks.html">How Graphtage Works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="releasing.html">Cutting a Release</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package.html">Graphtage API</a></li>
 </ul>
 
@@ -84,7 +85,7 @@ a portmanteau of “graph” and
 <p>There are several reasons why you might be here…</p>
 <aside class="topic">
 <p class="topic-title">You want to learn how to use Graphtage as a command line utility.</p>
-<p>This documentation focuses on Graphtage’ use as a library, specifically how to extend it by implementing new file
+<p>This documentation focuses on Graphtage’s use as a library, specifically how to extend it by implementing new file
 formats. For instructions on using Graphtage as a utility, see the documentation in its <a class="reference external" href="https://github.com/trailofbits/graphtage">GitHub page</a>.</p>
 </aside>
 <aside class="topic">
@@ -104,36 +105,61 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 <p class="topic-title">You are curious and want to learn more about how Graphtage works.</p>
 <p>Documentation on how Graphtage works is <a class="reference internal" href="howitworks.html"><span class="doc">here</span></a>.</p>
 </aside>
+<aside class="topic">
+<p class="topic-title">You maintain Graphtage and need to cut a release.</p>
+<p>The release procedure is documented in <a class="reference internal" href="releasing.html"><span class="doc">Cutting a Release</span></a>.</p>
+</aside>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Using Graphtage Programmatically</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="library.html#the-intermediate-representation">The Intermediate Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html#build-options">Build Options</a></li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#transforming-nodes-with-edits">Transforming Nodes with Edits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#applying-edits-to-nodes">Applying Edits to Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#formatting-and-printing-results">Formatting and Printing Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#diffing-in-memory-python-objects">Diffing In-Memory Python Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html#diffing-python-source-code">Diffing Python Source Code</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="extending.html">Extending Graphtage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="builders.html">Constructing Graphtage Trees</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="builders.html#expanding-children">Expanding Children</a></li>
 <li class="toctree-l3"><a class="reference internal" href="builders.html#custom-nodes">Custom Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="builders.html#data-class-slots">Data Class Slots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="builders.html#initializing-a-data-class-node">Initializing a Data Class Node</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="filetypes.html">Defining New Filetypes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="filetypes.html#filetype-matching">Filetype Matching</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filetypes.html#implementing-a-new-filetype">Implementing a New Filetype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filetypes.html#registering-the-module">Registering the Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filetypes.html#writing-the-formatter">Writing the Formatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filetypes.html#testing-a-new-filetype">Testing a New Filetype</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="printing.html">Printing Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printing.html">Printing Protocol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="printing.html#re-entering-the-protocol-with-the-same-node">Re-entering the protocol with the same node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="printing.html#status-output">Status Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="printing.html#enabling-ansi-color">Enabling ANSI Color</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="howitworks.html">How Graphtage Works</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="howitworks.html#why-mapping-trees-is-complex">Why Mapping Trees is Complex</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howitworks.html#matching-ordered-sequences">Matching Ordered Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howitworks.html#matching-unordered-collections">Matching Unordered Collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howitworks.html#unordered-lists">Unordered Lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howitworks.html#footnotes">Footnotes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="releasing.html">Cutting a Release</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="releasing.html#where-the-version-lives">Where the Version Lives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="releasing.html#what-the-workflows-do">What the Workflows Do</a></li>
+<li class="toctree-l2"><a class="reference internal" href="releasing.html#the-release-procedure">The Release Procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="releasing.html#verifying-a-release">Verifying a Release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="releasing.html#if-something-goes-wrong">If Something Goes Wrong</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="package.html">Graphtage API</a><ul>
@@ -334,6 +360,16 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="graphtage.git.html">graphtage.git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.git.html#git-functions">git functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.git.html#absent-revision">absent_revision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.git.html#main">main</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.git.html#mime-options">mime_options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.git.html#split-options">split_options</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.ini.html">graphtage.ini</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.ini.html#ini-classes">ini classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.ini.html#ini">INI</a></li>
@@ -436,6 +472,7 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 </li>
 <li class="toctree-l2"><a class="reference internal" href="graphtage.printer.html">graphtage.printer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.DEFAULT_PRINTER"><code class="docutils literal notranslate"><span class="pre">DEFAULT_PRINTER</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtage.printer.html#graphtage.printer.NULL_PRINTER"><code class="docutils literal notranslate"><span class="pre">NULL_PRINTER</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.printer.html#printer-classes">printer classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#ansicontext">ANSIContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.printer.html#combiningmarkcontext">CombiningMarkContext</a></li>
@@ -513,14 +550,18 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
 <li class="toctree-l3"><a class="reference internal" href="graphtage.toml.html#toml-classes">toml classes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#toml">TOML</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#tomlformatter">TOMLFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#tomlinlinetableformatter">TOMLInlineTableFormatter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#tomllistformatter">TOMLListFormatter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#tomlmapping">TOMLMapping</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#tomlstringformatter">TOMLStringFormatter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#tomltableformatter">TOMLTableFormatter</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="graphtage.toml.html#toml-functions">toml functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#build-tree">build_tree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#is-table">is_table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#key-value-pairs">key_value_pairs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#toml-dumps">toml_dumps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="graphtage.toml.html#writes-own-section">writes_own_section</a></li>
 </ul>
 </li>
 </ul>
@@ -603,7 +644,7 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, Trail of Bits.</p>
+    <p>&#169; Copyright 2020-2026, Trail of Bits.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
@@ -625,29 +666,28 @@ the <a class="reference internal" href="extending.html"><span class="doc">Extend
     <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
       <span class="rst-current-version" data-toggle="rst-current-version">
         <span class="fa fa-book"> Graphtage Documentation</span>
-        v0.3.1
+        v0.4.0
         <span class="fa fa-caret-down"></span>
       </span>
       <div class="rst-other-versions">
         <dl>
           <dt>Versions</dt>
-          
-            <dd><a href="/graphtage/latest">latest</a></dd>
-            <dd><a href="/graphtage/v0.3.1">0.3.1</a></dd>
-            <dd><a href="/graphtage/v0.3.0">0.3.0</a></dd>
-            <dd><a href="/graphtage/v0.2.9">0.2.9</a></dd>
-            <dd><a href="/graphtage/v0.2.8">0.2.8</a></dd>
-            <dd><a href="/graphtage/v0.2.7">0.2.7</a></dd>
-            <dd><a href="/graphtage/v0.2.6">0.2.6</a></dd>
-            <dd><a href="/graphtage/v0.2.5">0.2.5</a></dd>
-            <dd><a href="/graphtage/v0.2.4">0.2.4</a></dd>
-            <dd><a href="/graphtage/v0.2.3">0.2.3</a></dd>
-            <dd><a href="/graphtage/v0.2.2">0.2.2</a></dd>
-            <dd><a href="/graphtage/v0.2.1">0.2.1</a></dd>
-            <dd><a href="/graphtage/v0.2.0">0.2.0</a></dd>
-            <dd><a href="/graphtage/v0.1.1">0.1.1</a></dd>
-            <dd><a href="/graphtage/v0.1.0">0.1.0</a></dd>
-          
+          <dd><a href="../latest/">latest</a></dd>
+          <dd><a href="../v0.4.0/">0.4.0</a></dd>
+          <dd><a href="../v0.3.1/">0.3.1</a></dd>
+          <dd><a href="../v0.3.0/">0.3.0</a></dd>
+          <dd><a href="../v0.2.9/">0.2.9</a></dd>
+          <dd><a href="../v0.2.8/">0.2.8</a></dd>
+          <dd><a href="../v0.2.7/">0.2.7</a></dd>
+          <dd><a href="../v0.2.6/">0.2.6</a></dd>
+          <dd><a href="../v0.2.5/">0.2.5</a></dd>
+          <dd><a href="../v0.2.4/">0.2.4</a></dd>
+          <dd><a href="../v0.2.3/">0.2.3</a></dd>
+          <dd><a href="../v0.2.2/">0.2.2</a></dd>
+          <dd><a href="../v0.2.1/">0.2.1</a></dd>
+          <dd><a href="../v0.2.0/">0.2.0</a></dd>
+          <dd><a href="../v0.1.1/">0.1.1</a></dd>
+          <dd><a href="../v0.1.0/">0.1.0</a></dd>
         </dl>
         <dl>
           <dt>Source Code</dt>
